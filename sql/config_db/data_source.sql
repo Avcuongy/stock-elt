@@ -59,7 +59,4 @@ CREATE TABLE IF NOT EXISTS companies (
     CONSTRAINT unique_company_delisted UNIQUE (company_ticker, company_is_delisted)
 );
 
--- Tạo Index (MySQL tự động tạo index cho Foreign Keys)
 CREATE INDEX idx_company_time_stamp ON companies(company_update_time_stamp);
-
--- Lưu ý: MySQL đã tự tạo index cho các cột FK khi khai báo CONSTRAINT FOREIGN KEY.

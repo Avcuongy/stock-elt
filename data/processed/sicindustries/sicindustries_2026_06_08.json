@@ -1,0 +1,1322 @@
+[
+  {
+    "id": "da54dd5a0398011cdfa50d559c2c0ef8",
+    "sic": "6022",
+    "sicSector": "Finance Insurance And Real Estate",
+    "sicIndustry": "State Commercial Banks"
+  },
+  {
+    "id": "9752d873fa71c19dc602bf2a0696f9b5",
+    "sic": "2834",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Pharmaceutical Preparations"
+  },
+  {
+    "id": "4639475d6782a08c1e964f9a4329a254",
+    "sic": "6035",
+    "sicSector": "Finance Insurance And Real Estate",
+    "sicIndustry": "Savings Institution Federally Chartered"
+  },
+  {
+    "id": "06bf16f1f0372a63d520eac6cf7c5af7",
+    "sic": "6770",
+    "sicSector": "Finance Insurance And Real Estate",
+    "sicIndustry": "Blank Checks"
+  },
+  {
+    "id": "eefc7bfe8fd6e2c8c01aa6ca7b1aab1a",
+    "sic": "7812",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Motion Picture & Video Tape Production"
+  },
+  {
+    "id": "a4d5fad84ee90c1308cc37b52135d5db",
+    "sic": "6153",
+    "sicSector": "Finance Insurance And Real Estate",
+    "sicIndustry": "Short-Term Business Credit Institutions"
+  },
+  {
+    "id": "80c0e8c4457441901351e4abbcf8c75c",
+    "sic": "6099",
+    "sicSector": "Finance Insurance And Real Estate",
+    "sicIndustry": "Functions Related To Depository Banking Nec"
+  },
+  {
+    "id": "486c0401c56bf7ec2daa9eba58907da9",
+    "sic": "8200",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Educational Services"
+  },
+  {
+    "id": "567b8f5f423af15818a068235807edc0",
+    "sic": "6036",
+    "sicSector": "Finance Insurance And Real Estate",
+    "sicIndustry": "Savings Institutions Not Federally Chartered"
+  },
+  {
+    "id": "f899139df5e1059396431415e770c6dd",
+    "sic": "100",
+    "sicSector": "Agriculture Forestry And Fishing",
+    "sicIndustry": "Agricultural Production-Crops"
+  },
+  {
+    "id": "63c4b1baf3b4460fa9936b1a20919bec",
+    "sic": "4512",
+    "sicSector": "Transportation Communications Electric Gas And Sanitary Service",
+    "sicIndustry": "Air Transportation Scheduled"
+  },
+  {
+    "id": "9e406957d45fcb6c6f38c2ada7bace91",
+    "sic": "3721",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Aircraft"
+  },
+  {
+    "id": "ae502204564aafbffb712be630e3910b",
+    "sic": "8734",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Testing Laboratories"
+  },
+  {
+    "id": "c00193e70e8e27e70601b26161b4ae86",
+    "sic": "6311",
+    "sicSector": "Finance Insurance And Real Estate",
+    "sicIndustry": "Life Insurance"
+  },
+  {
+    "id": "b075703bbe07a50ddcccfaac424bb6d9",
+    "sic": "6021",
+    "sicSector": "Finance Insurance And Real Estate",
+    "sicIndustry": "National Commercial Banks"
+  },
+  {
+    "id": "f35fd567065af297ae65b621e0a21ae9",
+    "sic": "3674",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Semiconductors & Related Devices"
+  },
+  {
+    "id": "2668a7105966cae6e23901495176b8f9",
+    "sic": "3585",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Air-Cond & Warm Air Heatg Equip & Comm & Indl Refrig Equip"
+  },
+  {
+    "id": "1977b575ffa6d1708a5e3eb9ccd851cc",
+    "sic": "7990",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Miscellaneous Amusement & Recreation"
+  },
+  {
+    "id": "f8f5161cf94df05793592f5fab95138b",
+    "sic": "3571",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Electronic Computers"
+  },
+  {
+    "id": "b7d0858d41a6c29b873e4aba411e6d04",
+    "sic": "3829",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Measuring & Controlling Devices Nec"
+  },
+  {
+    "id": "fd9e2ae32b53addc06c63208be3aaa43",
+    "sic": "8711",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Engineering Services"
+  },
+  {
+    "id": "74791edf1f8e8b8289a5067737630874",
+    "sic": "3679",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Electronic Components Nec"
+  },
+  {
+    "id": "f110a326be6999afdeb8e7002c0ce44d",
+    "sic": "4522",
+    "sicSector": "Transportation Communications Electric Gas And Sanitary Service",
+    "sicIndustry": "Air Transportation Nonscheduled"
+  },
+  {
+    "id": "7bb060764a818184ebb1cc0d43d382aa",
+    "sic": "1311",
+    "sicSector": "Mining",
+    "sicIndustry": "Crude Petroleum & Natural Gas"
+  },
+  {
+    "id": "a9b7ba70783b617e9998dc4dd82eb3c5",
+    "sic": "1000",
+    "sicSector": "Mining",
+    "sicIndustry": "Metal Mining"
+  },
+  {
+    "id": "781397bc0630d47ab531ea850bddcf63",
+    "sic": "3690",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Miscellaneous Electrical Machinery Equipment & Supplies"
+  },
+  {
+    "id": "f11bec1411101c743f64df596773d0b2",
+    "sic": "3559",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Special Industry Machinery Nec"
+  },
+  {
+    "id": "cdcb2f5c7b071143529ef7f2705dfbc4",
+    "sic": "2741",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Miscellaneous Publishing"
+  },
+  {
+    "id": "6e0e24295e8a86282cb559b860416812",
+    "sic": "2836",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Biological Products (No Disgnostic Substances)"
+  },
+  {
+    "id": "a35d11c2f995c60b0341a9c777f1ae03",
+    "sic": "8741",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Management Services"
+  },
+  {
+    "id": "c5bbd980e5ab2c17413ec02bd757a9e5",
+    "sic": "3448",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Prefabricated Metal Buildings & Components"
+  },
+  {
+    "id": "56503192b14190d3826780d47c0d3bf3",
+    "sic": "3460",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Metal Forgings & Stampings"
+  },
+  {
+    "id": "aba54c23d97bf1321a4275e21d615112",
+    "sic": "6799",
+    "sicSector": "Finance Insurance And Real Estate",
+    "sicIndustry": "Investors Nec"
+  },
+  {
+    "id": "ac64504cc249b070772848642cffe6ff",
+    "sic": "7331",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Direct Mail Advertising Services"
+  },
+  {
+    "id": "894db62f7b7a6ed2f2a277dae56a017c",
+    "sic": "2860",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Industrial Organic Chemicals"
+  },
+  {
+    "id": "6aaba9a124857622930ca4e50f5afed2",
+    "sic": "6162",
+    "sicSector": "Finance Insurance And Real Estate",
+    "sicIndustry": "Mortgage Bankers & Loan Correspondents"
+  },
+  {
+    "id": "e1228be46de6a0234ac22ded31417bc7",
+    "sic": "3669",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Communications Equipment Nec"
+  },
+  {
+    "id": "c6d6445d97e06d08b60853156601cf58",
+    "sic": "3845",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Electromedical & Electrotherapeutic Apparatus"
+  },
+  {
+    "id": "a714ec6796f638ba4d5792f78dccd134",
+    "sic": "5084",
+    "sicSector": "Wholesale Trade",
+    "sicIndustry": "Wholesale-Industrial Machinery & Equipment"
+  },
+  {
+    "id": "187acf7982f3c169b3075132380986e4",
+    "sic": "4813",
+    "sicSector": "Transportation Communications Electric Gas And Sanitary Service",
+    "sicIndustry": "Telephone Communications (No Radiotelephone)"
+  },
+  {
+    "id": "c6862d63b17d713ee14f3a405d9fde77",
+    "sic": "6351",
+    "sicSector": "Finance Insurance And Real Estate",
+    "sicIndustry": "Surety Insurance"
+  },
+  {
+    "id": "6775a0635c302542da2c32aa19d86be0",
+    "sic": "2835",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "In Vitro & In Vivo Diagnostic Substances"
+  },
+  {
+    "id": "233f1dd0f3f537bcb7a338ea74d63483",
+    "sic": "5960",
+    "sicSector": "Retail Trade",
+    "sicIndustry": "Retail-Nonstore Retailers"
+  },
+  {
+    "id": "7da18d0326a9f46a4817e19c805819ae",
+    "sic": "3841",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Surgical & Medical Instruments & Apparatus"
+  },
+  {
+    "id": "46e0eae7d5217c79c3ef6b4c212b8c6f",
+    "sic": "7340",
+    "sicSector": "Services",
+    "sicIndustry": "Services-To Dwellings & Other Buildings"
+  },
+  {
+    "id": "23a6de9d1b696e1e7ddd06bb056745a2",
+    "sic": "7373",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Computer Integrated Systems Design"
+  },
+  {
+    "id": "016669d2649ea531365419cc792ef8bc",
+    "sic": "7374",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Computer Processing & Data Preparation"
+  },
+  {
+    "id": "80a9efd37c62cbdee2351192983a43d6",
+    "sic": "8731",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Commercial Physical & Biological Research"
+  },
+  {
+    "id": "8f91c9c261bfa0650898a921928d0950",
+    "sic": "7372",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Prepackaged Software"
+  },
+  {
+    "id": "c2f599841f21aaefeeabd2a60ef7bfe8",
+    "sic": "6199",
+    "sicSector": "Finance Insurance And Real Estate",
+    "sicIndustry": "Finance Services"
+  },
+  {
+    "id": "03cf87174debaccd689c90c34577b82f",
+    "sic": "2400",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Lumber & Wood Products (No Furniture)"
+  },
+  {
+    "id": "b29eed44276144e4e8103a661f9a78b7",
+    "sic": "1731",
+    "sicSector": "Construction",
+    "sicIndustry": "Electrical Work"
+  },
+  {
+    "id": "ad2972cf612acdeec0f99338a768aa05",
+    "sic": "7370",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Computer Programming Data Processing Etc."
+  },
+  {
+    "id": "08f90c1a417155361a5c4b8d297e0d78",
+    "sic": "2000",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Food And Kindred Products"
+  },
+  {
+    "id": "0f34132b15dd02f282a11ea1e322a96d",
+    "sic": "6211",
+    "sicSector": "Finance Insurance And Real Estate",
+    "sicIndustry": "Security Brokers Dealers & Flotation Companies"
+  },
+  {
+    "id": "e36286b94d3c219f414e0427e5f73aa5",
+    "sic": "3714",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Motor Vehicle Parts & Accessories"
+  },
+  {
+    "id": "5e15fb59326e7a9c3d6558ca74621683",
+    "sic": "6324",
+    "sicSector": "Finance Insurance And Real Estate",
+    "sicIndustry": "Hospital & Medical Service Plans"
+  },
+  {
+    "id": "e73fecc08ee9b0e1a876614ec3178bac",
+    "sic": "3790",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Miscellaneous Transportation Equipment"
+  },
+  {
+    "id": "ade55409d1224074754035a5a937d2e0",
+    "sic": "2833",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Medicinal Chemicals & Botanical Products"
+  },
+  {
+    "id": "4180b5120ca2e09eaa3bd2ebf4b53667",
+    "sic": "7389",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Business Services Nec"
+  },
+  {
+    "id": "3f647cadf56541fb9513cb63ec370187",
+    "sic": "3576",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Computer Communications Equipment"
+  },
+  {
+    "id": "6b1a864b240fc77e3a901e3470b243f9",
+    "sic": "8742",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Management Consulting Services"
+  },
+  {
+    "id": "77ec6f21c85b637cc42bb997841e11a6",
+    "sic": "3670",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Electronic Components & Accessories"
+  },
+  {
+    "id": "63771e3e7738ed3048c3dc440023db38",
+    "sic": "8090",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Misc Health & Allied Services Nec"
+  },
+  {
+    "id": "2bd7f907b7f5b6bbd91822c0c7b835f6",
+    "sic": "1389",
+    "sicSector": "Mining",
+    "sicIndustry": "Oil & Gas Field Services Nec"
+  },
+  {
+    "id": "4baf54f36935058bcc696fcef3f4689b",
+    "sic": "3620",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Electrical Industrial Apparatus"
+  },
+  {
+    "id": "e140dbab44e01e699491a59c9978b924",
+    "sic": "5013",
+    "sicSector": "Wholesale Trade",
+    "sicIndustry": "Wholesale-Motor Vehicle Supplies & New Parts"
+  },
+  {
+    "id": "5516adb142fcb18a017c72602abbdb6d",
+    "sic": "5122",
+    "sicSector": "Wholesale Trade",
+    "sicIndustry": "Wholesale-Drugs Proprietaries & Druggists' Sundries"
+  },
+  {
+    "id": "5cc4bb753030a3d804351b2dfec0d8b5",
+    "sic": "6331",
+    "sicSector": "Finance Insurance And Real Estate",
+    "sicIndustry": "Fire Marine & Casualty Insurance"
+  },
+  {
+    "id": "7818354194c4feae57304abadc2c437c",
+    "sic": "8093",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Specialty Outpatient Facilities Nec"
+  },
+  {
+    "id": "3ce3bd7d63a2c9c81983cc8e9bd02ae5",
+    "sic": "4400",
+    "sicSector": "Transportation Communications Electric Gas And Sanitary Service",
+    "sicIndustry": "Water Transportation"
+  },
+  {
+    "id": "096ffc299200f51751b08da6d865ae95",
+    "sic": "4731",
+    "sicSector": "Transportation Communications Electric Gas And Sanitary Service",
+    "sicIndustry": "Arrangement Of Transportation Of Freight & Cargo"
+  },
+  {
+    "id": "41071a1452b40720449779a233716395",
+    "sic": "4833",
+    "sicSector": "Transportation Communications Electric Gas And Sanitary Service",
+    "sicIndustry": "Television Broadcasting Stations"
+  },
+  {
+    "id": "a6197a578fe7778e8d49a95ac425bcfc",
+    "sic": "3861",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Photographic Equipment & Supplies"
+  },
+  {
+    "id": "2e907f44e0a9616314cf3d964d4e3c93",
+    "sic": "5945",
+    "sicSector": "Retail Trade",
+    "sicIndustry": "Retail-Hobby Toy & Game Shops"
+  },
+  {
+    "id": "2c758933af02c0b301906f2819ae1268",
+    "sic": "3317",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Steel Pipe & Tubes"
+  },
+  {
+    "id": "82138b11a724b94d18df2e083d8b7b55",
+    "sic": "8071",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Medical Laboratories"
+  },
+  {
+    "id": "ddf9029977a61241841edeae15e9b53f",
+    "sic": "3663",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Radio & Tv Broadcasting & Communications Equipment"
+  },
+  {
+    "id": "8091588a3968da46e3e43a76bf3b3a98",
+    "sic": "6411",
+    "sicSector": "Finance Insurance And Real Estate",
+    "sicIndustry": "Insurance Agents Brokers & Service"
+  },
+  {
+    "id": "2e5ac40b5a02c5a2c35fe028a266aa91",
+    "sic": "6794",
+    "sicSector": "Finance Insurance And Real Estate",
+    "sicIndustry": "Patent Owners & Lessors"
+  },
+  {
+    "id": "860052df4915de4d6c3deac9f7ebf5cc",
+    "sic": "5734",
+    "sicSector": "Retail Trade",
+    "sicIndustry": "Retail-Computer & Computer Software Stores"
+  },
+  {
+    "id": "c24fe9f765a44048868b5a620f05678e",
+    "sic": "3825",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Instruments For Meas & Testing Of Electricity & Elec Signals"
+  },
+  {
+    "id": "3a4496776767aaa99f9804d0905fe584",
+    "sic": "4899",
+    "sicSector": "Transportation Communications Electric Gas And Sanitary Service",
+    "sicIndustry": "Communications Services Nec"
+  },
+  {
+    "id": "e761813f83dfc86fa1c6e0da5510c3b8",
+    "sic": "3661",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Telephone & Telegraph Apparatus"
+  },
+  {
+    "id": "494c08f7a144d3cc4cfa661ed1244039",
+    "sic": "3844",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "X-Ray Apparatus & Tubes & Related Irradiation Apparatus"
+  },
+  {
+    "id": "3f78fa1cdb0e2fda88c2a935950ffdf1",
+    "sic": "6798",
+    "sicSector": "Finance Insurance And Real Estate",
+    "sicIndustry": "Real Estate Investment Trusts"
+  },
+  {
+    "id": "3b036b877a6a074d7dbfc706fe868c1d",
+    "sic": "8700",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Engineering Accounting Research Management"
+  },
+  {
+    "id": "05ee45de8d877c3949760a94fa691533",
+    "sic": "4841",
+    "sicSector": "Transportation Communications Electric Gas And Sanitary Service",
+    "sicIndustry": "Cable & Other Pay Television Services"
+  },
+  {
+    "id": "2e5c2cb8d13e8fba78d95211440ba326",
+    "sic": "3949",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Sporting & Athletic Goods Nec"
+  },
+  {
+    "id": "842424a1d0595b76ec4fa03c46e8d755",
+    "sic": "3572",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Computer Storage Devices"
+  },
+  {
+    "id": "9eac167ec1efbe078138397fabba902e",
+    "sic": "3843",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Dental Equipment & Supplies"
+  },
+  {
+    "id": "4f11b55f57612f06fe9638b99f6c66e6",
+    "sic": "3640",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Electric Lighting & Wiring Equipment"
+  },
+  {
+    "id": "a081cab429ff7a3b96e0a07319f1049e",
+    "sic": "3086",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Plastics Foam Products"
+  },
+  {
+    "id": "4ae1e2b07ecf6c799b91ed45e95278b8",
+    "sic": "4953",
+    "sicSector": "Transportation Communications Electric Gas And Sanitary Service",
+    "sicIndustry": "Refuse Systems"
+  },
+  {
+    "id": "f3c89b7be367aa4246f90aa007efe525",
+    "sic": "3672",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Printed Circuit Boards"
+  },
+  {
+    "id": "72f67e70f6b7cdc4cc893edaddf0c4c6",
+    "sic": "3490",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Miscellaneous Fabricated Metal Products"
+  },
+  {
+    "id": "094366eaa7a4b5d7f9ed227f212b3649",
+    "sic": "5961",
+    "sicSector": "Retail Trade",
+    "sicIndustry": "Retail-Catalog & Mail-Order Houses"
+  },
+  {
+    "id": "0fc170ecbb8ff1afb2c6de48ea5343e7",
+    "sic": "2800",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Chemicals & Allied Products"
+  },
+  {
+    "id": "b9e4093f970251d5bcf888b76944a4bc",
+    "sic": "8082",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Home Health Care Services"
+  },
+  {
+    "id": "13d2b7361a27dbc9960ae158598a6a96",
+    "sic": "6141",
+    "sicSector": "Finance Insurance And Real Estate",
+    "sicIndustry": "Personal Credit Institutions"
+  },
+  {
+    "id": "eddeb82df22554fa67c641e3f8a25566",
+    "sic": "5912",
+    "sicSector": "Retail Trade",
+    "sicIndustry": "Retail-Drug Stores And Proprietary Stores"
+  },
+  {
+    "id": "0d46839f6371fb84f6b6c682f5fc2c77",
+    "sic": "7371",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Computer Programming Services"
+  },
+  {
+    "id": "e52ad5c9f751f599492b4f087ed7ecfc",
+    "sic": "3531",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Construction Machinery & Equip"
+  },
+  {
+    "id": "fc528592c3858f90196fbfacc814f235",
+    "sic": "1623",
+    "sicSector": "Construction",
+    "sicIndustry": "Water Sewer Pipeline Comm & Power Line Construction"
+  },
+  {
+    "id": "326fb04c3abf030fe3f4e341f39b573f",
+    "sic": "3250",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Structural Clay Products"
+  },
+  {
+    "id": "970627414218ccff3497cb7a784288f5",
+    "sic": "7011",
+    "sicSector": "Services",
+    "sicIndustry": "Hotels & Motels"
+  },
+  {
+    "id": "1e0f65eb20acbfb27ee05ddc000b50ec",
+    "sic": "6500",
+    "sicSector": "Finance Insurance And Real Estate",
+    "sicIndustry": "Real Estate"
+  },
+  {
+    "id": "a292f1c5874b2be8395ffd75f313937f",
+    "sic": "3826",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Laboratory Analytical Instruments"
+  },
+  {
+    "id": "2354c276f1c9156f4b97a11a7aa41254",
+    "sic": "7200",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Personal Services"
+  },
+  {
+    "id": "2c601ad9d2ff9bc8b282670cdd54f69f",
+    "sic": "7830",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Motion Picture Theaters"
+  },
+  {
+    "id": "6e66329891cbb9adb1966e44379cfadf",
+    "sic": "5099",
+    "sicSector": "Wholesale Trade",
+    "sicIndustry": "Wholesale-Durable Goods Nec"
+  },
+  {
+    "id": "68abef8ee1ac9b664a90b0bbaff4f770",
+    "sic": "4911",
+    "sicSector": "Transportation Communications Electric Gas And Sanitary Service",
+    "sicIndustry": "Electric Services"
+  },
+  {
+    "id": "ce60ff163cab97029cc727e20e0fc3a7",
+    "sic": "3081",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Unsupported Plastics Film & Sheet"
+  },
+  {
+    "id": "40dba662fae60cd3bcceaa76a82d2873",
+    "sic": "3812",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Search Detection Navagation Guidance Aeronautical Sys"
+  },
+  {
+    "id": "7c022d9c6dd601e087e186ee6dfe1fc7",
+    "sic": "4812",
+    "sicSector": "Transportation Communications Electric Gas And Sanitary Service",
+    "sicIndustry": "Radiotelephone Communications"
+  },
+  {
+    "id": "f4d0e2e7fc057a58f7ca4a391f01940a",
+    "sic": "5200",
+    "sicSector": "Retail Trade",
+    "sicIndustry": "Retail-Building Materials Hardware Garden Supply"
+  },
+  {
+    "id": "1fb2a1c37b18aa4611c3949d6148d0f8",
+    "sic": "2430",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Millwood Veneer Plywood & Structural Wood Members"
+  },
+  {
+    "id": "a35fe7f7fe8217b4369a0af4244d1fca",
+    "sic": "5000",
+    "sicSector": "Wholesale Trade",
+    "sicIndustry": "Wholesale-Durable Goods"
+  },
+  {
+    "id": "9b40aee76034c9543ceacba5df759a1d",
+    "sic": "8300",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Social Services"
+  },
+  {
+    "id": "0cd6a652ed1f7811192db1f700c8f0e7",
+    "sic": "3357",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Drawing & Insulating Of Nonferrous Wire"
+  },
+  {
+    "id": "2151b4c76b4dcb048d06a5c32942b6f6",
+    "sic": "3678",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Electronic Connectors"
+  },
+  {
+    "id": "0a934ecab584f7a4cd0220a7caeccbcc",
+    "sic": "4832",
+    "sicSector": "Transportation Communications Electric Gas And Sanitary Service",
+    "sicIndustry": "Radio Broadcasting Stations"
+  },
+  {
+    "id": "4c144c47ecba6f8318128703ca9e2601",
+    "sic": "2040",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Grain Mill Products"
+  },
+  {
+    "id": "872dd316eb8a432cbc63f141e2d68ded",
+    "sic": "4213",
+    "sicSector": "Transportation Communications Electric Gas And Sanitary Service",
+    "sicIndustry": "Trucking (No Local)"
+  },
+  {
+    "id": "3e77a14629775492504515dc4b23deda",
+    "sic": "3577",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Computer Peripheral Equipment Nec"
+  },
+  {
+    "id": "ccd2e3eaa5c991ac880991328c8f1463",
+    "sic": "3089",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Plastics Products Nec"
+  },
+  {
+    "id": "fa3dade3a49305f27f64203452ac954c",
+    "sic": "5180",
+    "sicSector": "Wholesale Trade",
+    "sicIndustry": "Wholesale-Beer Wine & Distilled Alcoholic Beverages"
+  },
+  {
+    "id": "f5c150afbfbcef941def203e85cf40bc",
+    "sic": "3221",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Glass Containers"
+  },
+  {
+    "id": "939314105ce8701e67489642ef4d49e8",
+    "sic": "3523",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Farm Machinery & Equipment"
+  },
+  {
+    "id": "e074a2975740cdf3948cfc063892260e",
+    "sic": "6795",
+    "sicSector": "Finance Insurance And Real Estate",
+    "sicIndustry": "Mineral Royalty Traders"
+  },
+  {
+    "id": "327708dd10d68b1361ad3addbaca01f2",
+    "sic": "2870",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Agricultural Chemicals"
+  },
+  {
+    "id": "b9a25e422ba96f7572089a00b838c3f8",
+    "sic": "6532",
+    "sicSector": "Finance Insurance And Real Estate",
+    "sicIndustry": "Real Estate Dealers (For Their Own Account)"
+  },
+  {
+    "id": "0a7d83f084ec258aefd128569dda03d7",
+    "sic": "6531",
+    "sicSector": "Finance Insurance And Real Estate",
+    "sicIndustry": "Real Estate Agents & Managers (For Others)"
+  },
+  {
+    "id": "7fa215c9efebb3811a7ef58409907899",
+    "sic": "3842",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Orthopedic Prosthetic & Surgical Appliances & Supplies"
+  },
+  {
+    "id": "12092a75caa75e4644fd2869f0b6c45a",
+    "sic": "3443",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Fabricated Plate Work (Boiler Shops)"
+  },
+  {
+    "id": "c5ef831f5d34faafc22a23a602cf6e40",
+    "sic": "6172",
+    "sicSector": "Finance Insurance And Real Estate",
+    "sicIndustry": "Finance Lessors"
+  },
+  {
+    "id": "1d72310edc006dadf2190caad5802983",
+    "sic": "1221",
+    "sicSector": "Mining",
+    "sicIndustry": "Bituminous Coal & Lignite Surface Mining"
+  },
+  {
+    "id": "1dba3025b159cd9354da65e2d0436a31",
+    "sic": "5047",
+    "sicSector": "Wholesale Trade",
+    "sicIndustry": "Wholesale-Medical Dental & Hospital Equipment & Supplies"
+  },
+  {
+    "id": "64de166633d61c8326232568b42beef1",
+    "sic": "7381",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Detective Guard & Armored Car Services"
+  },
+  {
+    "id": "400c3241004b5db7ca7f5abfef2794f2",
+    "sic": "7900",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Amusement & Recreation Services"
+  },
+  {
+    "id": "aba18772fc70c8cbf79a79f413ef102b",
+    "sic": "3711",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Motor Vehicles & Passenger Car Bodies"
+  },
+  {
+    "id": "abd987257ff0eddc2bc6602538cb3c43",
+    "sic": "6221",
+    "sicSector": "Finance Insurance And Real Estate",
+    "sicIndustry": "Commodity Contracts Brokers & Dealers"
+  },
+  {
+    "id": "0d441de75945e5acbc865406fc9a2559",
+    "sic": "3579",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Office Machines Nec"
+  },
+  {
+    "id": "2cad8fa47bbef282badbb8de5374b894",
+    "sic": "2100",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Tobacco Products"
+  },
+  {
+    "id": "77c493ec14246d748db3ee8fce0092db",
+    "sic": "3569",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "General Industrial Machinery & Equipment Nec"
+  },
+  {
+    "id": "26f5bd4aa64fdadf96152ca6e6408068",
+    "sic": "2090",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Miscellaneous Food Preparations & Kindred Products"
+  },
+  {
+    "id": "ef67f7c2d86352c2c42e19d20f881f53",
+    "sic": "2911",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Petroleum Refining"
+  },
+  {
+    "id": "e1226495c14f1a62ae17aa76c1f0d457",
+    "sic": "8011",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Offices & Clinics Of Doctors Of Medicine"
+  },
+  {
+    "id": "21c52f533c0c585bab4f075bf08d7104",
+    "sic": "4513",
+    "sicSector": "Transportation Communications Electric Gas And Sanitary Service",
+    "sicIndustry": "Air Courier Services"
+  },
+  {
+    "id": "8c53d30ad023ce50140181f713059ddf",
+    "sic": "4931",
+    "sicSector": "Transportation Communications Electric Gas And Sanitary Service",
+    "sicIndustry": "Electric & Other Services Combined"
+  },
+  {
+    "id": "78daab4f4fce94374d8a53444c77c2c6",
+    "sic": "5331",
+    "sicSector": "Retail Trade",
+    "sicIndustry": "Retail-Variety Stores"
+  },
+  {
+    "id": "35d02fef7d9a24e237057162abab82b7",
+    "sic": "4220",
+    "sicSector": "Transportation Communications Electric Gas And Sanitary Service",
+    "sicIndustry": "Public Warehousing & Storage"
+  },
+  {
+    "id": "9657c1fffd38824e5ab0472e022e577e",
+    "sic": "2540",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Partitions Shelvg Lockers & Office & Store Fixtures"
+  },
+  {
+    "id": "e5a90182cc81e12ab5e72d66e0b46fe3",
+    "sic": "7310",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Advertising"
+  },
+  {
+    "id": "56bd37d3a2fda0f2f41925019c81011d",
+    "sic": "5045",
+    "sicSector": "Wholesale Trade",
+    "sicIndustry": "Wholesale-Computers & Peripheral Equipment & Software"
+  },
+  {
+    "id": "67ff32d40fb51f1a2fd2c4f1b1019785",
+    "sic": "8000",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Health Services"
+  },
+  {
+    "id": "5982e32d2cd58d7f3e71f90600b59267",
+    "sic": "8051",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Skilled Nursing Care Facilities"
+  },
+  {
+    "id": "18085327b86002fc604c323b9a07f997",
+    "sic": "7363",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Help Supply Services"
+  },
+  {
+    "id": "c2073ffa77b5357a498057413bb09d3a",
+    "sic": "6282",
+    "sicSector": "Finance Insurance And Real Estate",
+    "sicIndustry": "Investment Advice"
+  },
+  {
+    "id": "b4944963b5c83d545c3d3022bcf03282",
+    "sic": "2890",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Miscellaneous Chemical Products"
+  },
+  {
+    "id": "3a30be93eb45566a90f4e95ee72a089a",
+    "sic": "3290",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Abrasive Asbestos & Misc Nonmetallic Mineral Prods"
+  },
+  {
+    "id": "1abf005ea3f957c5cb79941ab7707c11",
+    "sic": "7380",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Miscellaneous Business Services"
+  },
+  {
+    "id": "9161ab7a1b61012c4c303f10b4c16b2c",
+    "sic": "5171",
+    "sicSector": "Wholesale Trade",
+    "sicIndustry": "Wholesale-Petroleum Bulk Stations & Terminals"
+  },
+  {
+    "id": "84f5ddd735176becc72c3b1ff424149e",
+    "sic": "5700",
+    "sicSector": "Retail Trade",
+    "sicIndustry": "Retail-Home Furniture Furnishings & Equipment Stores"
+  },
+  {
+    "id": "1e669a61fb93f9eea7edf5cd3e3d4bcc",
+    "sic": "7822",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Motion Picture & Video Tape Distribution"
+  },
+  {
+    "id": "7cb36e23529e4de4c41460940cc85e6e",
+    "sic": "6321",
+    "sicSector": "Finance Insurance And Real Estate",
+    "sicIndustry": "Accident & Health Insurance"
+  },
+  {
+    "id": "c4414e538a5475ec0244673b7f2f7dbb",
+    "sic": "4700",
+    "sicSector": "Transportation Communications Electric Gas And Sanitary Service",
+    "sicIndustry": "Transportation Services"
+  },
+  {
+    "id": "2d579dc29360d8bbfbb4aa541de5afa9",
+    "sic": "2030",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Canned Frozen & Preservd Fruit Veg & Food Specialties"
+  },
+  {
+    "id": "d82118376df344b0010f53909b961db3",
+    "sic": "1381",
+    "sicSector": "Mining",
+    "sicIndustry": "Drilling Oil & Gas Wells"
+  },
+  {
+    "id": "c5b270a763686e776039618cc709f3a6",
+    "sic": "3621",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Motors & Generators"
+  },
+  {
+    "id": "54ff9e9e3a2ec0300d4ce11261f5169f",
+    "sic": "2080",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Beverages"
+  },
+  {
+    "id": "074177d3eb6371e32c16c55a3b8f706b",
+    "sic": "2273",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Carpets & Rugs"
+  },
+  {
+    "id": "b1f62fa99de9f27a048344d55c5ef7a6",
+    "sic": "3011",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Tires & Inner Tubes"
+  },
+  {
+    "id": "bca382c81484983f2d437f97d1e141f3",
+    "sic": "3823",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Industrial Instruments For Measurement Display And Control"
+  },
+  {
+    "id": "b7c13b0a474277d7f6c6d6ba8a0ed678",
+    "sic": "7510",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Auto Rental & Leasing (No Drivers)"
+  },
+  {
+    "id": "26c0a195973b46ba52a013c89dd82315",
+    "sic": "5150",
+    "sicSector": "Wholesale Trade",
+    "sicIndustry": "Wholesale-Farm Product Raw Materials"
+  },
+  {
+    "id": "38eb982ee635354d3febf457beeee736",
+    "sic": "6361",
+    "sicSector": "Finance Insurance And Real Estate",
+    "sicIndustry": "Title Insurance"
+  },
+  {
+    "id": "35a0f1963430da063133ba27d695f851",
+    "sic": "5063",
+    "sicSector": "Wholesale Trade",
+    "sicIndustry": "Wholesale-Electrical Apparatus & Equipment Wiring Supplies"
+  },
+  {
+    "id": "0a5c79b1eaf15445da252ada718857e9",
+    "sic": "3060",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Fabricated Rubber Products Nec"
+  },
+  {
+    "id": "acff1af62d0f91f4be73f4857552d70c",
+    "sic": "3931",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Musical Instruments"
+  },
+  {
+    "id": "e8e0dd181e4ee545195120626098bfba",
+    "sic": "3480",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Ordnance & Accessories (No Vehicles/Guided Missiles)"
+  },
+  {
+    "id": "08fc80de8121419136e443a70489c123",
+    "sic": "5172",
+    "sicSector": "Wholesale Trade",
+    "sicIndustry": "Wholesale-Petroleum & Petroleum Products (No Bulk Stations)"
+  },
+  {
+    "id": "acf4b89d3d503d8252c9c4ba75ddbf6d",
+    "sic": "900",
+    "sicSector": "Agriculture Forestry And Fishing",
+    "sicIndustry": "Fishing Hunting And Trapping"
+  },
+  {
+    "id": "619205da514e83f869515c782a328d3c",
+    "sic": "2330",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Women'S Misses' And Juniors Outerwear"
+  },
+  {
+    "id": "663772ea088360f95bac3dc7ffb841be",
+    "sic": "2810",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Industrial Inorganic Chemicals"
+  },
+  {
+    "id": "79e785d63f00348ff360d5a86528580b",
+    "sic": "4922",
+    "sicSector": "Transportation Communications Electric Gas And Sanitary Service",
+    "sicIndustry": "Natural Gas Transmission"
+  },
+  {
+    "id": "c3d377d10b13f8b39bf1218a60fe77b1",
+    "sic": "3231",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Glass Products Made Of Purchased Glass"
+  },
+  {
+    "id": "b1bc40d056bad6ec6949d9bb6fee5e84",
+    "sic": "5812",
+    "sicSector": "Retail Trade",
+    "sicIndustry": "Retail-Eating  Places"
+  },
+  {
+    "id": "f0dd4a99fba6075a9494772b58f95280",
+    "sic": "1400",
+    "sicSector": "Mining",
+    "sicIndustry": "Mining & Quarrying Of Nonmetallic Minerals (No Fuels)"
+  },
+  {
+    "id": "6f1d0705c91c2145201df18a1a0c7345",
+    "sic": "2844",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Perfumes Cosmetics & Other Toilet Preparations"
+  },
+  {
+    "id": "630b7d8dd49a0bab667498f287d68c16",
+    "sic": "3580",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Refrigeration & Service Industry Machinery"
+  },
+  {
+    "id": "acf06cdd9c744f969958e1f085554c8b",
+    "sic": "3341",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Secondary Smelting & Refining Of Nonferrous Metals"
+  },
+  {
+    "id": "3bc71faebe42e1639eb6fded38d714cd",
+    "sic": "5411",
+    "sicSector": "Retail Trade",
+    "sicIndustry": "Retail-Grocery Stores"
+  },
+  {
+    "id": "7f3ad9c65beb20ccbd34a05041b4420b",
+    "sic": "6029",
+    "sicSector": "Finance Insurance And Real Estate",
+    "sicIndustry": "Commercial Banks Nec"
+  },
+  {
+    "id": "d397c2b2be2178fe6247bd50fc97cff2",
+    "sic": "7600",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Miscellaneous Repair Services"
+  },
+  {
+    "id": "a6b8deb7798e7532ade2a8934477d3ce",
+    "sic": "5712",
+    "sicSector": "Retail Trade",
+    "sicIndustry": "Retail-Furniture Stores"
+  },
+  {
+    "id": "0937fb5864ed06ffb59ae5f9b5ed67a9",
+    "sic": "3743",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Railroad Equipment"
+  },
+  {
+    "id": "56dc0997d871e9177069bb472574eb29",
+    "sic": "5412",
+    "sicSector": "Retail Trade",
+    "sicIndustry": "Retail-Convenience Stores"
+  },
+  {
+    "id": "7612936dcc85282c6fa4dd9d4ffe57f1",
+    "sic": "3990",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Miscellaneous Manufacturing Industries"
+  },
+  {
+    "id": "b43a6403c17870707ca3c44984a2da22",
+    "sic": "4941",
+    "sicSector": "Transportation Communications Electric Gas And Sanitary Service",
+    "sicIndustry": "Water Supply"
+  },
+  {
+    "id": "460b491b917d4185ed1f5be97229721a",
+    "sic": "3728",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Aircraft Parts & Auxiliary Equipment Nec"
+  },
+  {
+    "id": "a70dc40477bc2adceef4d2c90f47eb82",
+    "sic": "2320",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Men'S & Boys' Furnishgs Work Clothg & Allied Garments"
+  },
+  {
+    "id": "3e9f7c16bd1cdea78f8e2eea72dfdfbe",
+    "sic": "7361",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Employment Agencies"
+  },
+  {
+    "id": "d3f06eef2ffac7faadbe3055a70682ac",
+    "sic": "5080",
+    "sicSector": "Wholesale Trade",
+    "sicIndustry": "Wholesale-Machinery Equipment & Supplies"
+  },
+  {
+    "id": "7ea4e7fcdc6aff2777bd594a3754e02a",
+    "sic": "5600",
+    "sicSector": "Retail Trade",
+    "sicIndustry": "Retail-Apparel & Accessory Stores"
+  },
+  {
+    "id": "c17028c9b6e0c5deaad29665d582284a",
+    "sic": "5940",
+    "sicSector": "Retail Trade",
+    "sicIndustry": "Retail-Miscellaneous Shopping Goods Stores"
+  },
+  {
+    "id": "6cf821bc98b2d343170185bb3de84cc4",
+    "sic": "4412",
+    "sicSector": "Transportation Communications Electric Gas And Sanitary Service",
+    "sicIndustry": "Deep Sea Foreign Transportation Of Freight"
+  },
+  {
+    "id": "334467d41d5cf21e234465a1530ba647",
+    "sic": "3312",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Steel Works Blast Furnaces & Rolling Mills (Coke Ovens)"
+  },
+  {
+    "id": "dd409260aea46a90e61b9a69fb9726ef",
+    "sic": "6200",
+    "sicSector": "Finance Insurance And Real Estate",
+    "sicIndustry": "Security & Commodity Brokers Dealers Exchanges & Services"
+  },
+  {
+    "id": "537d9b6c927223c796cac288cced29df",
+    "sic": "1040",
+    "sicSector": "Mining",
+    "sicIndustry": "Gold And Silver Ores"
+  },
+  {
+    "id": "e2eabaf96372e20a9e3d4b5f83723a61",
+    "sic": "3634",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Electric Housewares & Fans"
+  },
+  {
+    "id": "60ce36723c17bbac504f2ef4c8a46995",
+    "sic": "4955",
+    "sicSector": "Transportation Communications Electric Gas And Sanitary Service",
+    "sicIndustry": "Hazardous Waste Management"
+  },
+  {
+    "id": "252a3dbaeb32e7690242ad3b556e626b",
+    "sic": "3578",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Calculating & Accounting Machines (No Electronic Computers)"
+  },
+  {
+    "id": "4c7a167bb329bd92580a99ce422d6fa6",
+    "sic": "5810",
+    "sicSector": "Retail Trade",
+    "sicIndustry": "Retail-Eating & Drinking Places"
+  },
+  {
+    "id": "28b60a16b55fd531047c0c958ce14b95",
+    "sic": "2452",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Prefabricated Wood Bldgs & Components"
+  },
+  {
+    "id": "bb702465f3c3141263ddd046c9585b27",
+    "sic": "3950",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Pens Pencils & Other Artists' Materials"
+  },
+  {
+    "id": "5e18f86fad006a5846541997511989d5",
+    "sic": "7330",
+    "sicSector": "Services",
+    "sicIndustry": "Services-Mailing Reproduction Commercial Art & Photography"
+  },
+  {
+    "id": "a6e8ad49045f0bef72fb92d7c4a97fed",
+    "sic": "5072",
+    "sicSector": "Wholesale Trade",
+    "sicIndustry": "Wholesale-Hardware"
+  },
+  {
+    "id": "c9f06bc7b46d0247a91c8fc665c13d0e",
+    "sic": "3575",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Computer Terminals"
+  },
+  {
+    "id": "b5b8c484824d8a06f4f3d570bc420313",
+    "sic": "3827",
+    "sicSector": "Manufacturing",
+    "sicIndustry": "Optical Instruments & Lenses"
+  }
+]

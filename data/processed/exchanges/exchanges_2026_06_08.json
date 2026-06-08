@@ -1,0 +1,210 @@
+[
+  {
+    "id": "7dfd4a400d092d56e089f4e47411a0a0",
+    "name": "NASDAQ",
+    "region": "United States",
+    "market_type": "Equity",
+    "local_open": "09:30",
+    "local_close": "16:15"
+  },
+  {
+    "id": "f8de4250c89fe3200c8c7126ca364fed",
+    "name": "NYSE",
+    "region": "United States",
+    "market_type": "Equity",
+    "local_open": "09:30",
+    "local_close": "16:15"
+  },
+  {
+    "id": "d28e06acbeee71a5b573a392ae393ea1",
+    "name": "AMEX",
+    "region": "United States",
+    "market_type": "Equity",
+    "local_open": "09:30",
+    "local_close": "16:15"
+  },
+  {
+    "id": "6ab8edde7f00fe1c10415554efb8fa6e",
+    "name": "BATS",
+    "region": "United States",
+    "market_type": "Equity",
+    "local_open": "09:30",
+    "local_close": "16:15"
+  },
+  {
+    "id": "948ce72be6c871b84f6d0dab24f209ed",
+    "name": "Toronto",
+    "region": "Canada",
+    "market_type": "Equity",
+    "local_open": "09:30",
+    "local_close": "16:00"
+  },
+  {
+    "id": "5058b1b18c9614cf0b81b92d1183be2d",
+    "name": "Toronto Ventures",
+    "region": "Canada",
+    "market_type": "Equity",
+    "local_open": "09:30",
+    "local_close": "16:00"
+  },
+  {
+    "id": "59ead8d1e124ccfb79f3ace06f43e703",
+    "name": "London",
+    "region": "United Kingdom",
+    "market_type": "Equity",
+    "local_open": "08:00",
+    "local_close": "16:30"
+  },
+  {
+    "id": "704cc1eda36033291de738ee7564bad7",
+    "name": "XETRA",
+    "region": "Germany",
+    "market_type": "Equity",
+    "local_open": "08:00",
+    "local_close": "20:00"
+  },
+  {
+    "id": "ee1611b61f5688e70c12b40684dbb395",
+    "name": "Berlin",
+    "region": "Germany",
+    "market_type": "Equity",
+    "local_open": "08:00",
+    "local_close": "20:00"
+  },
+  {
+    "id": "4312d5c8cdda027420c474e2221abc34",
+    "name": "Frankfurt",
+    "region": "Germany",
+    "market_type": "Equity",
+    "local_open": "08:00",
+    "local_close": "20:00"
+  },
+  {
+    "id": "7b88a4aca50f33c258efc438d098c9f4",
+    "name": "Munich",
+    "region": "Germany",
+    "market_type": "Equity",
+    "local_open": "08:00",
+    "local_close": "20:00"
+  },
+  {
+    "id": "a330ac6c48198545d4d2f9ff2cb0fc05",
+    "name": "Stuttgart",
+    "region": "Germany",
+    "market_type": "Equity",
+    "local_open": "08:00",
+    "local_close": "20:00"
+  },
+  {
+    "id": "e20d37a5d7fcc4c35be6fc18a8e71bfa",
+    "name": "Paris",
+    "region": "France",
+    "market_type": "Equity",
+    "local_open": "09:00",
+    "local_close": "17:30"
+  },
+  {
+    "id": "550d05ab240ec337038af814ff0de287",
+    "name": "Barcelona",
+    "region": "Spain",
+    "market_type": "Equity",
+    "local_open": "09:00",
+    "local_close": "17:30"
+  },
+  {
+    "id": "6314044c3803213e9fd3f3ecf8c90d65",
+    "name": "Madrid",
+    "region": "Spain",
+    "market_type": "Equity",
+    "local_open": "09:00",
+    "local_close": "17:30"
+  },
+  {
+    "id": "260b4e591e03de9750f965a30087ed5f",
+    "name": "Lisbon",
+    "region": "Portugal",
+    "market_type": "Equity",
+    "local_open": "08:00",
+    "local_close": "16:30"
+  },
+  {
+    "id": "62413a57c5e3dc51177995fa175d3286",
+    "name": "Tokyo",
+    "region": "Japan",
+    "market_type": "Equity",
+    "local_open": "09:00",
+    "local_close": "15:00"
+  },
+  {
+    "id": "ac6d7f70650e35d39af1e736560cbfc3",
+    "name": "NSE",
+    "region": "India",
+    "market_type": "Equity",
+    "local_open": "09:15",
+    "local_close": "15:30"
+  },
+  {
+    "id": "d98b2f189eb20a8ab358ae9266ee6a80",
+    "name": "BSE",
+    "region": "India",
+    "market_type": "Equity",
+    "local_open": "09:15",
+    "local_close": "15:30"
+  },
+  {
+    "id": "5466ee572bcbc75830d044e66ab429bc",
+    "name": "Shanghai",
+    "region": "Mainland China",
+    "market_type": "Equity",
+    "local_open": "09:30",
+    "local_close": "15:00"
+  },
+  {
+    "id": "8f3199f4c051d7e2597afb0b55b23dee",
+    "name": "Shenzhen",
+    "region": "Mainland China",
+    "market_type": "Equity",
+    "local_open": "09:30",
+    "local_close": "15:00"
+  },
+  {
+    "id": "8b476ff778119b8d49588f3daadf69a1",
+    "name": "Hong Kong",
+    "region": "Hong Kong",
+    "market_type": "Equity",
+    "local_open": "09:30",
+    "local_close": "16:00"
+  },
+  {
+    "id": "7d22b855631aab8e73a153ad8977a9fb",
+    "name": "Sao Paolo",
+    "region": "Brazil",
+    "market_type": "Equity",
+    "local_open": "10:00",
+    "local_close": "17:30"
+  },
+  {
+    "id": "8dbb07a18d46f63d8b3c8994d5ccc351",
+    "name": "Mexico",
+    "region": "Mexico",
+    "market_type": "Equity",
+    "local_open": "08:30",
+    "local_close": "15:00"
+  },
+  {
+    "id": "33416c1d32d3c19771d09bf215c7b514",
+    "name": "Johannesburg",
+    "region": "South Africa",
+    "market_type": "Equity",
+    "local_open": "09:00",
+    "local_close": "17:00"
+  },
+  {
+    "id": "4cc6684df7b4a92b1dec6fce3264fac8",
+    "name": "Global",
+    "region": "Global",
+    "market_type": "Forex",
+    "local_open": "00:00",
+    "local_close": "23:59"
+  }
+]

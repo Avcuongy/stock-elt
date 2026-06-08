@@ -1,3 +1,3 @@
-from .transform_companies import *
-from .transform_exchanges import *
-from .transform_others import *
+from .transform_others_1 import transform_others
+from .transform_exchanges_2 import transform_exchanges
+from .transform_companies_3 import transform_companies

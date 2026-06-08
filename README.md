@@ -22,6 +22,12 @@ pip install -r requirements.txt
 pip install -e .
 
 python scripts/config.py
-python scripts/backend.py
+
+# Data source
+python scripts/backend/extract.py
+python scripts/backend/transform.py
+python scripts/backend/load.py
+
+# ETL
 python scripts/elt.py
 ```

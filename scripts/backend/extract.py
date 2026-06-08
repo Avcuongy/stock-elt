@@ -1,13 +1,12 @@
 from pathlib import Path
 import logging
+from backend.extract import crawl_markets, crawl_companies
 
 import warnings
 
-from backend.extract import crawl_markets, crawl_companies
-
 warnings.filterwarnings("ignore")
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 LOGS_DIR = PROJECT_ROOT / "logs"
 
 
@@ -17,12 +16,14 @@ def main() -> None:
         level=logging.INFO,
         format="[%(levelname)s] %(message)s",
         filemode="a",
-        filename=LOGS_DIR / "Backend.log",
+        filename=LOGS_DIR / "backend.log",
     )
-    logging.info("Extract data")
+    logging.info("Extract: Data Source")
+    print("[Backend - Extract] Start")
     crawl_markets()
     crawl_companies()
-    logging.info("Extract data finished")
+    print("[Backend - Extract] Finished")
+    logging.info("Extract: Finished")
 
 
 if __name__ == "__main__":

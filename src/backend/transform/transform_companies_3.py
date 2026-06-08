@@ -1,21 +1,15 @@
+from pathlib import Path
 import os
 import json
 import datetime
 
-import numpy as np
-import pandas as pd
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
+DATA_DIR = PROJECT_ROOT / "data"
+DATA_RAW_DIR = DATA_DIR / "raw"
+DATA_PROCESSED_DIR = DATA_DIR / "processed"
 
-from sqlalchemy import create_engine
 
-
-def get_latest_file_in_directory(directory, extension):
-    """
-    Get the latest file in a directory with a specific extension.
-
-    :param directory: Directory to search for files.
-    :param extension: File extension to look for.
-    :return: Path to the latest file or None if no files are found.
-    """
+def _get_latest_file_in_directory(directory, extension):
     files = [
         os.path.join(directory, f)
         for f in os.listdir(directory)
@@ -28,32 +22,15 @@ def get_latest_file_in_directory(directory, extension):
 
 
 def transform_companies():
-    """
-    Transform raw companies data and save to processed/companies folder.
-    """
-    # Define paths
-    base_dir = os.path.dirname(
-        os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
-    )
-    raw_dir = os.path.join(base_dir, "data", "raw", "companies")
-    processed_dir = os.path.join(base_dir, "data", "processed", "companies")
 
-    # Ensure processed directory exists
-    os.makedirs(processed_dir, exist_ok=True)
-
-    # Get latest raw companies file
-    latest_file = get_latest_file_in_directory(raw_dir, ".json")
+    latest_file = _get_latest_file_in_directory(DATA_RAW_DIR / "companies", ".json")
     if not latest_file:
-        print("No raw companies file found.")
+        print("[Backend - Transform] No raw companies file found.")
         return
 
-    print(f"Processing file: {latest_file}")
-
-    # Load raw data
     with open(latest_file, "r", encoding="utf-8") as f:
         raw_data = json.load(f)
 
-    # Transform companies data
     companies = []
     for item in raw_data:
         company = {
@@ -73,16 +50,13 @@ def transform_companies():
         }
         companies.append(company)
 
-    # Generate output filename with timestamp
     today = datetime.datetime.now().strftime("%Y_%m_%d")
-    output_file = os.path.join(processed_dir, f"process_companies_{today}.json")
+    output_file = DATA_PROCESSED_DIR / "companies" / f"companies_{today}.json"
 
-    # Save processed data
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(companies, f, indent=2, ensure_ascii=False)
 
-    print(f"Processed {len(companies)} companies.")
-    print(f"Saved to: {output_file}")
+    print(f"[Backend - Transform] Transformed {len(companies)} companies.")
 
     return companies
 

@@ -1,0 +1,582 @@
+[
+  {
+    "id": "13acf4b7c88a570cb9d0c988dbc9d848",
+    "sector": "Financial Services",
+    "industry": "Banks - Regional"
+  },
+  {
+    "id": "8a07f2e22f8569cb73eebad5a52471d8",
+    "sector": "Healthcare",
+    "industry": "Biotechnology"
+  },
+  {
+    "id": "6854800dc9230f966ff02e5952311a0e",
+    "sector": "Industrials",
+    "industry": "Shell Companies"
+  },
+  {
+    "id": "336fdcf7d540e4b430a890b63da159c9",
+    "sector": "Communication Services",
+    "industry": "Entertainment"
+  },
+  {
+    "id": "bf3c8d3e5d1e05f423503073250b6473",
+    "sector": "Financial Services",
+    "industry": "Credit Services"
+  },
+  {
+    "id": "e82d73464cfede3b307a8b039aaf67ae",
+    "sector": "Consumer Defensive",
+    "industry": "Education & Training Services"
+  },
+  {
+    "id": "02257e88c8ffcdc5455a926a4b1b911d",
+    "sector": "Consumer Defensive",
+    "industry": "Farm Products"
+  },
+  {
+    "id": "697f7a70b4c3fa7793b38cb4890ade3e",
+    "sector": "Industrials",
+    "industry": "Airlines"
+  },
+  {
+    "id": "c858b4ff24bc25a5b36ea56dad3897db",
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense"
+  },
+  {
+    "id": "91ed2dde47e0e7a528ec550732cc7fe2",
+    "sector": "Healthcare",
+    "industry": "Diagnostics & Research"
+  },
+  {
+    "id": "649292c0a7c1931a7a17382e3fc8eb49",
+    "sector": "Financial Services",
+    "industry": "Insurance - Life"
+  },
+  {
+    "id": "4fa4c46842fed0d450153e05d77e3ec8",
+    "sector": "Technology",
+    "industry": "Communication Equipment"
+  },
+  {
+    "id": "7d6289a138d023566899266747f8d2a9",
+    "sector": "Basic Materials",
+    "industry": "Building Products & Equipment"
+  },
+  {
+    "id": "12fe6ffa6aba0d25c5f70eaf7cb83e03",
+    "sector": "Consumer Cyclical",
+    "industry": "Gambling"
+  },
+  {
+    "id": "55fa8bfc012037ff09b6a5d0cddb6944",
+    "sector": "Technology",
+    "industry": "Consumer Electronics"
+  },
+  {
+    "id": "44b932c38a31dcfe405c777722cd8f7a",
+    "sector": "Technology",
+    "industry": "Scientific & Technical Instruments"
+  },
+  {
+    "id": "b54e740544dfc486af0a8774781f848b",
+    "sector": "Technology",
+    "industry": "Semiconductors"
+  },
+  {
+    "id": "fee6c7ad653c84f066bcb52ec90c76bd",
+    "sector": "Industrials",
+    "industry": "Engineering & Construction"
+  },
+  {
+    "id": "cf8c613ee4e5d67de31f5ebe160b6fd7",
+    "sector": "Technology",
+    "industry": "Electronic Components"
+  },
+  {
+    "id": "02c4a0218d98a0f5f95f249437b82183",
+    "sector": "Industrials",
+    "industry": "Airports & Air Services"
+  },
+  {
+    "id": "b73a1c2de7912e256a564c1bdb631791",
+    "sector": "Energy",
+    "industry": "Oil & Gas E&P"
+  },
+  {
+    "id": "5206e7084cfa585f995fe052ec42a2d3",
+    "sector": "Basic Materials",
+    "industry": "Other Industrial Metals & Mining"
+  },
+  {
+    "id": "36326577d91e3f814eff901297bbe335",
+    "sector": "Industrials",
+    "industry": "Electrical Equipment & Parts"
+  },
+  {
+    "id": "8985955cb58176b8c9bfec61172e391e",
+    "sector": "Technology",
+    "industry": "Semiconductor Equipment & Materials"
+  },
+  {
+    "id": "35106be8d4e2ad405c542d42826e7c83",
+    "sector": "Healthcare",
+    "industry": "Health Information Services"
+  },
+  {
+    "id": "1e1a97e508b3d959b9fc916092948c35",
+    "sector": "Financial Services",
+    "industry": "Asset Management"
+  },
+  {
+    "id": "40637369071d75208c540d27b39bb6fc",
+    "sector": "Industrials",
+    "industry": "Conglomerates"
+  },
+  {
+    "id": "025a52614c093a9296c1979f16a79f34",
+    "sector": "Basic Materials",
+    "industry": "Specialty Chemicals"
+  },
+  {
+    "id": "99da62fe1a3a557d130e23a69b94dbe0",
+    "sector": "Financial Services",
+    "industry": "Mortgage Finance"
+  },
+  {
+    "id": "aa11efec391a3cc76c035150cce3b586",
+    "sector": "Healthcare",
+    "industry": "Medical Devices"
+  },
+  {
+    "id": "a26595ff751c2140bf8c0eebc449c1e9",
+    "sector": "Industrials",
+    "industry": "Industrial Distribution"
+  },
+  {
+    "id": "9cabe23482c01201c9e3a679fcf5530c",
+    "sector": "Communication Services",
+    "industry": "Telecom Services"
+  },
+  {
+    "id": "72aad73b7b80809fe0b1ed3e9cb20163",
+    "sector": "Financial Services",
+    "industry": "Insurance - Specialty"
+  },
+  {
+    "id": "e3268fc336c87ba3ea9498eda774d9a0",
+    "sector": "Communication Services",
+    "industry": "Advertising Agencies"
+  },
+  {
+    "id": "55097b8c97b1cd3c74c3b761cc06864d",
+    "sector": "Industrials",
+    "industry": "Travel Services"
+  },
+  {
+    "id": "d31db39e234419bd24496cbbb2377acf",
+    "sector": "Technology",
+    "industry": "Software - Application"
+  },
+  {
+    "id": "98bf4640b315d6320d944b36f9ea06e7",
+    "sector": "Financial Services",
+    "industry": "Capital Markets"
+  },
+  {
+    "id": "f3342c407891999811fcd9d8dda3c031",
+    "sector": "Consumer Defensive",
+    "industry": "Packaged Foods"
+  },
+  {
+    "id": "2d365efe3f08b33273a46de7b9c9b164",
+    "sector": "Consumer Cyclical",
+    "industry": "Auto Parts"
+  },
+  {
+    "id": "558ff5c41e3581d5376256ea0753bdae",
+    "sector": "Healthcare",
+    "industry": "Healthcare Plans"
+  },
+  {
+    "id": "ff98b78ab2e54a59d9e66624381aed61",
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - Specialty & Generic"
+  },
+  {
+    "id": "30d757ac832b3fce0d0d1b2637e6f6d9",
+    "sector": "Industrials",
+    "industry": "Consulting Services"
+  },
+  {
+    "id": "a16090690e52939d34467027c0d9b5d5",
+    "sector": "Healthcare",
+    "industry": "Medical Care Facilities"
+  },
+  {
+    "id": "176762f715e85e20f6f15374c6c22dbd",
+    "sector": "Energy",
+    "industry": "Oil & Gas Equipment & Services"
+  },
+  {
+    "id": "98a072e7832784a71cd583f7fcd4197b",
+    "sector": "Consumer Cyclical",
+    "industry": "Specialty Retail"
+  },
+  {
+    "id": "268182910bbdb24fcb748ca54a7b6fbf",
+    "sector": "Financial Services",
+    "industry": "Insurance - Diversified"
+  },
+  {
+    "id": "3d4850f0d4e68f589216c978b2fd64d6",
+    "sector": "Financial Services",
+    "industry": "Insurance - Property & Casualty"
+  },
+  {
+    "id": "bd013989094b991345f527310ace7019",
+    "sector": "Technology",
+    "industry": "Software - Infrastructure"
+  },
+  {
+    "id": "eaee770a4bfe98a7df83cfd83571a9b5",
+    "sector": "Energy",
+    "industry": "Oil & Gas Midstream"
+  },
+  {
+    "id": "3fc4cc55eb3e1921467981bf4a72b060",
+    "sector": "Industrials",
+    "industry": "Integrated Freight & Logistics"
+  },
+  {
+    "id": "7607933aeca8709d8c025b104ae5c492",
+    "sector": "Technology",
+    "industry": "Computer Hardware"
+  },
+  {
+    "id": "4668112d7c5f80a73a826dd8150989df",
+    "sector": "Basic Materials",
+    "industry": "Steel"
+  },
+  {
+    "id": "5c3e151fb832a7fb70e0ae304c178fff",
+    "sector": "Industrials",
+    "industry": "Business Equipment & Supplies"
+  },
+  {
+    "id": "1211f28c070ba620080a5c79297da9c5",
+    "sector": "Real Estate",
+    "industry": "REIT - Mortgage"
+  },
+  {
+    "id": "9c446702e552cc15710c2e745aec199e",
+    "sector": "Industrials",
+    "industry": "Specialty Business Services"
+  },
+  {
+    "id": "43defa6c9129fabc91490e8bf2ae1e59",
+    "sector": "Consumer Cyclical",
+    "industry": "Leisure"
+  },
+  {
+    "id": "7654c9f4bc5734252b13d3ac9fb24748",
+    "sector": "Utilities",
+    "industry": "Utilities - Renewable"
+  },
+  {
+    "id": "b67ae5bb80ced93ecb10bc622fd6b56d",
+    "sector": "Industrials",
+    "industry": "Staffing & Employment Services"
+  },
+  {
+    "id": "a9d3e472572d2adad47f0328594c9215",
+    "sector": "Industrials",
+    "industry": "Waste Management"
+  },
+  {
+    "id": "db04b2e68ae8b6e4b908f596c0489ecb",
+    "sector": "Industrials",
+    "industry": "Specialty Industrial Machinery"
+  },
+  {
+    "id": "026ca10f1db6eb5a95702272d27b4312",
+    "sector": "Consumer Cyclical",
+    "industry": "Internet Retail"
+  },
+  {
+    "id": "0deeabaade66267e000efdbc33059662",
+    "sector": "Industrials",
+    "industry": "Pollution & Treatment Controls"
+  },
+  {
+    "id": "fb4d749a01d51d9495399e6ccbdff056",
+    "sector": "Consumer Defensive",
+    "industry": "Pharmaceutical Retailers"
+  },
+  {
+    "id": "7492d4b843cd4979ee3d7182635c5639",
+    "sector": "Financial Services",
+    "industry": "Insurance Brokers"
+  },
+  {
+    "id": "0751d23b63995608b3f81ae8ff791866",
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - Major"
+  },
+  {
+    "id": "618cea2fe810eec8a03e2baef3345f85",
+    "sector": "Industrials",
+    "industry": "Farm & Heavy Construction Machinery"
+  },
+  {
+    "id": "4ddad617ae03a4b0a7eebd557bdd9bde",
+    "sector": "Basic Materials",
+    "industry": "Uranium"
+  },
+  {
+    "id": "98cce1183e2cffaa0ef30db650405ed6",
+    "sector": "Consumer Cyclical",
+    "industry": "Resorts & Casinos"
+  },
+  {
+    "id": "94dd990f840f728c937fbc8e72e1a46b",
+    "sector": "Real Estate",
+    "industry": "Real Estate - Development"
+  },
+  {
+    "id": "f7cf58b9d74e4762373dedf7b445688b",
+    "sector": "Consumer Cyclical",
+    "industry": "Personal Services"
+  },
+  {
+    "id": "cbf3f9be0f10167766a6d6ef2f0241de",
+    "sector": "Utilities",
+    "industry": "Utilities - Regulated Electric"
+  },
+  {
+    "id": "59c72bf5fa1244256498d09da7509ac6",
+    "sector": "Technology",
+    "industry": "Electronics & Computer Distribution"
+  },
+  {
+    "id": "cd58310f70e2d064aba3a6062b97aee1",
+    "sector": "Real Estate",
+    "industry": "REIT - Specialty"
+  },
+  {
+    "id": "60ea88ba40c9144465fcd1791d8430d0",
+    "sector": "Communication Services",
+    "industry": "Broadcasting"
+  },
+  {
+    "id": "a49db90c7d7e1b333a16a1be1741b491",
+    "sector": "Industrials",
+    "industry": "Trucking"
+  },
+  {
+    "id": "a51ff6b63fac4d7d945a7036ea7e456d",
+    "sector": "Consumer Defensive",
+    "industry": "Beverages - Wineries & Distilleries"
+  },
+  {
+    "id": "8459c865cb38f6d78362428d3ba8c634",
+    "sector": "Consumer Cyclical",
+    "industry": "Packaging & Containers"
+  },
+  {
+    "id": "9768feb3fdb1f267b06093bc572952dd",
+    "sector": "Basic Materials",
+    "industry": "Gold"
+  },
+  {
+    "id": "ef4e764dea3e3070f053847868399c2b",
+    "sector": "Technology",
+    "industry": "Information Technology Services"
+  },
+  {
+    "id": "c29fd0b8a56035d57e5386d3b2022b18",
+    "sector": "Real Estate",
+    "industry": "Real Estate - Diversified"
+  },
+  {
+    "id": "2c04274dc375fba9c07345e892275f8c",
+    "sector": "Real Estate",
+    "industry": "Real Estate Services"
+  },
+  {
+    "id": "15bc6f85a858a8fd2d23ad814e8c33fc",
+    "sector": "Healthcare",
+    "industry": "Medical Instruments & Supplies"
+  },
+  {
+    "id": "a3172c215ad792311c3430470eb083d2",
+    "sector": "Healthcare",
+    "industry": "Medical Distribution"
+  },
+  {
+    "id": "1353728f6ff7bdcf9dd4a0d5a4eab372",
+    "sector": "Basic Materials",
+    "industry": "Thermal Coal"
+  },
+  {
+    "id": "6a3f1ccf8467c8cb2af6117dfc592211",
+    "sector": "Industrials",
+    "industry": "Security & Protection Services"
+  },
+  {
+    "id": "18fcab8a2f0e2bd9ad2ec65ce0234f9b",
+    "sector": "Consumer Cyclical",
+    "industry": "Auto Manufacturers"
+  },
+  {
+    "id": "cfb99364cbdffd7851a5219c58fc90d5",
+    "sector": "Consumer Defensive",
+    "industry": "Tobacco"
+  },
+  {
+    "id": "a0a0e99c3ec869f1d1ac4914d43fb6a2",
+    "sector": "Energy",
+    "industry": "Oil & Gas Refining & Marketing"
+  },
+  {
+    "id": "c0d73650e9704fdf59162897167fc889",
+    "sector": "Basic Materials",
+    "industry": "Agricultural Inputs"
+  },
+  {
+    "id": "5606dca94b813892af5cd2484914e5d7",
+    "sector": "Consumer Defensive",
+    "industry": "Discount Stores"
+  },
+  {
+    "id": "d148a3fa1251264fc6bcee2c5a6fba95",
+    "sector": "Basic Materials",
+    "industry": "Building Materials"
+  },
+  {
+    "id": "bbcbf36c1d369eabb05c243e61cf569c",
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - General"
+  },
+  {
+    "id": "10bede7ae9b860f10458e4ee72df3c36",
+    "sector": "Communication Services",
+    "industry": "Internet Content & Information"
+  },
+  {
+    "id": "7dee797610957f4916a6a85d0389b44d",
+    "sector": "Consumer Cyclical",
+    "industry": "Furnishings Fixtures & Appliances"
+  },
+  {
+    "id": "18f55247c38a961a176b4147e701ea09",
+    "sector": "Financial Services",
+    "industry": "Savings & Cooperative Banks"
+  },
+  {
+    "id": "55e3ce9465373863662474029af92471",
+    "sector": "Industrials",
+    "industry": "Rental & Leasing Services"
+  },
+  {
+    "id": "3b029d9131ab90a0b02eaea7fb5e8f42",
+    "sector": "Consumer Defensive",
+    "industry": "Food Distribution"
+  },
+  {
+    "id": "7cc9dc0098926a69c55e51f4c8031559",
+    "sector": "Consumer Cyclical",
+    "industry": "Apparel Retail"
+  },
+  {
+    "id": "386c1f850fbd5f478fb4ef8a134c1740",
+    "sector": "Consumer Cyclical",
+    "industry": "Restaurants"
+  },
+  {
+    "id": "7c14457bc4e1b70fffdd7ca27c28a0b7",
+    "sector": "Consumer Defensive",
+    "industry": "Household & Personal Products"
+  },
+  {
+    "id": "087a503d9bdc5ed45d10e655e61e0e90",
+    "sector": "Industrials",
+    "industry": "Metal Fabrication"
+  },
+  {
+    "id": "12d07129eb05c373c81614563881e17e",
+    "sector": "Consumer Defensive",
+    "industry": "Grocery Stores"
+  },
+  {
+    "id": "ba85960eebcc143ca2af5aa0c1f1ddaa",
+    "sector": "Financial Services",
+    "industry": "Banks - Diversified"
+  },
+  {
+    "id": "bcd9e83b52b2eb8a6ddb3a147a3fda3a",
+    "sector": "Consumer Cyclical",
+    "industry": "Footwear & Accessories"
+  },
+  {
+    "id": "346e4a0f7c689d6e8922bf338589cce7",
+    "sector": "Basic Materials",
+    "industry": "Coking Coal"
+  },
+  {
+    "id": "a05e8566dda14e98982faf49bec29ec1",
+    "sector": "Consumer Cyclical",
+    "industry": "Home Improvement Retail"
+  },
+  {
+    "id": "91bc0a42bba6b5b644625ac09ddca67d",
+    "sector": "Industrials",
+    "industry": "Railroads"
+  },
+  {
+    "id": "352ccd39c4ed093da3690db82cca8ca0",
+    "sector": "Technology",
+    "industry": "Solar"
+  },
+  {
+    "id": "114e57c0cc6efff793a1dd8278193a5c",
+    "sector": "Basic Materials",
+    "industry": "Aluminum"
+  },
+  {
+    "id": "6a2baa05e12b2bec2ed4093000aa46dd",
+    "sector": "Utilities",
+    "industry": "Utilities - Regulated Water"
+  },
+  {
+    "id": "ab8b097e1c91bf2c296872b1a66f8844",
+    "sector": "Consumer Cyclical",
+    "industry": "Apparel Manufacturing"
+  },
+  {
+    "id": "6089771c4b5ac170dfb12ccafc589ce9",
+    "sector": "Basic Materials",
+    "industry": "Chemicals"
+  },
+  {
+    "id": "1ade1f0ea8a2994d6b6fbb6ae5bcc2a1",
+    "sector": "Industrials",
+    "industry": "Marine Shipping"
+  },
+  {
+    "id": "44001ac887f4b348af643c350f7e87ae",
+    "sector": "Consumer Cyclical",
+    "industry": "Lodging"
+  },
+  {
+    "id": "d8ec1e52dcae3e6a9b0ffcc0ed7d1af3",
+    "sector": "Basic Materials",
+    "industry": "Other Precious Metals & Mining"
+  },
+  {
+    "id": "599d3f4a2679339cb4bc4da43594ba8f",
+    "sector": "Communication Services",
+    "industry": "Electronic Gaming & Multimedia"
+  }
+]

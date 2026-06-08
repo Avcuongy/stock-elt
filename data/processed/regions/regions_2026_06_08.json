@@ -1,0 +1,77 @@
+[
+  {
+    "id": "f253efe302d32ab264a76e0ce65be769",
+    "region": "United States",
+    "market_type": "Equity"
+  },
+  {
+    "id": "445d337b5cd5de476f99333df6b0c2a7",
+    "region": "Canada",
+    "market_type": "Equity"
+  },
+  {
+    "id": "89f9c9f489be2a83cf57e53b9197d288",
+    "region": "United Kingdom",
+    "market_type": "Equity"
+  },
+  {
+    "id": "d8b00929dec65d422303256336ada04f",
+    "region": "Germany",
+    "market_type": "Equity"
+  },
+  {
+    "id": "0309a6c666a7a803fdb9db95de71cf01",
+    "region": "France",
+    "market_type": "Equity"
+  },
+  {
+    "id": "907eba32d950bfab68227fd7ea22999b",
+    "region": "Spain",
+    "market_type": "Equity"
+  },
+  {
+    "id": "ea71b362e3ea9969db085abfccdeb10d",
+    "region": "Portugal",
+    "market_type": "Equity"
+  },
+  {
+    "id": "53a577bb3bc587b0c28ab808390f1c9b",
+    "region": "Japan",
+    "market_type": "Equity"
+  },
+  {
+    "id": "7d31e0da1ab99fe8b08a22118e2f402b",
+    "region": "India",
+    "market_type": "Equity"
+  },
+  {
+    "id": "9386971a7d91851614cf9a072906452c",
+    "region": "Mainland China",
+    "market_type": "Equity"
+  },
+  {
+    "id": "8b476ff778119b8d49588f3daadf69a1",
+    "region": "Hong Kong",
+    "market_type": "Equity"
+  },
+  {
+    "id": "42537f0fb56e31e20ab9c2305752087d",
+    "region": "Brazil",
+    "market_type": "Equity"
+  },
+  {
+    "id": "8dbb07a18d46f63d8b3c8994d5ccc351",
+    "region": "Mexico",
+    "market_type": "Equity"
+  },
+  {
+    "id": "c89bc418c38da77213c6c6e03cac2510",
+    "region": "South Africa",
+    "market_type": "Equity"
+  },
+  {
+    "id": "4cc6684df7b4a92b1dec6fce3264fac8",
+    "region": "Global",
+    "market_type": "Forex"
+  }
+]
