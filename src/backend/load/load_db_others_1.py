@@ -10,7 +10,7 @@ from utils.config_env import DATABASE_URL
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 DATA_DIR = PROJECT_ROOT / "data"
 DATA_PROCESSED_DIR = DATA_DIR / "processed"
-LOGS_DIR = DATA_DIR / "logs" / "backend.log"
+LOGS_DIR = PROJECT_ROOT / "logs" / "backend.log"
 
 
 def _get_latest_file_in_directory(directory, extension):
@@ -70,7 +70,6 @@ def _load_regions(engine):
                         "close": local_close,
                     },
                 )
-                conn.commit()
                 inserted += 1
 
             except IntegrityError as e:
@@ -82,6 +81,7 @@ def _load_regions(engine):
                 logging.error(
                     f"[Backend - Load] Error inserting region {region.get('region')}: {e}"
                 )
+        conn.commit()
 
     logging.info(
         f"[Backend - Load] Regions: {inserted} inserted/updated, {skipped} skipped"
@@ -121,7 +121,7 @@ def _load_industries(engine):
                         "sector": industry.get("sector"),
                     },
                 )
-                conn.commit()
+
                 inserted += 1
 
             except IntegrityError as e:
@@ -133,6 +133,7 @@ def _load_industries(engine):
                 logging.error(
                     f"[Backend - Load] Error inserting industry {industry.get('industry')}: {e}"
                 )
+        conn.commit()
 
     logging.info(
         f"[Backend - Load] Industries: {inserted} inserted/updated, {skipped} skipped"
@@ -144,9 +145,6 @@ def _load_sicindustries(engine):
         DATA_PROCESSED_DIR / "sicindustries", ".json"
     )
 
-    latest_file = _get_latest_file_in_directory(
-        DATA_PROCESSED_DIR / "sicindustries", ".json"
-    )
     if not latest_file:
         logging.info("[Backend - Load] No processed sicindustries file found.")
         return
@@ -182,7 +180,6 @@ def _load_sicindustries(engine):
                         "sector": sic.get("sicSector"),
                     },
                 )
-                conn.commit()
                 inserted += 1
 
             except IntegrityError as e:
@@ -192,6 +189,7 @@ def _load_sicindustries(engine):
                 logging.error(
                     f"[Backend - Load] Error inserting SIC {sic.get('sic')}: {e}"
                 )
+        conn.commit()
 
     logging.info(
         f"[Backend - Load] SIC Industries: {inserted} inserted/updated, {skipped} skipped"

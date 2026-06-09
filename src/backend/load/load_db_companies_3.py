@@ -36,7 +36,9 @@ def _get_db_connection():
 
 
 def _load_companies(engine):
-    latest_file = _get_latest_file_in_directory(DATA_PROCESSED_DIR, ".json")
+    latest_file = _get_latest_file_in_directory(
+        DATA_PROCESSED_DIR / "companies", ".json"
+    )
     if not latest_file:
         logging.info("[Backend - Load] No processed companies file found.")
         return
@@ -160,7 +162,7 @@ def _load_companies(engine):
                             "is_delisted": is_delisted,
                         },
                     )
-                    conn.commit()
+
                     updated += 1
                 else:
                     insert_sql = text("""
@@ -191,7 +193,6 @@ def _load_companies(engine):
                             "location": location,
                         },
                     )
-                    conn.commit()
                     inserted += 1
 
                 if (idx + 1) % 1000 == 0:
@@ -209,6 +210,7 @@ def _load_companies(engine):
                     logging.error(
                         f"[Backend - Load] Error processing company {company.get('ticker')}: {e}"
                     )
+        conn.commit()
 
     logging.info(
         f"[Backend - Load] Companies: {inserted} inserted, {updated} updated, {skipped} skipped, {errors} errors"
