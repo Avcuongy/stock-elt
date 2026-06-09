@@ -1,7 +1,6 @@
 from pathlib import Path
-import sys
 import logging
-from elt.extract import crawl_ohlcs
+import sys
 import warnings
 
 warnings.filterwarnings("ignore")
@@ -20,7 +19,7 @@ def main() -> None:
         ],
     )
     logging.info("[Extract] ETL Start")
-    crawl_ohlcs()
+
     logging.info("[Extract] ETL Finished")
 
 

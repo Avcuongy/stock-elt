@@ -1,14 +1,17 @@
 from pathlib import Path
 import os
+import sys
 import json
 import datetime
 import traceback
+import logging
 import pandas as pd
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 DATA_DIR = PROJECT_ROOT / "data"
 DATA_RAW_DIR = DATA_DIR / "raw"
 DATA_COMPLETE_DIR = DATA_DIR / "completed"
+LOGS_DIR = PROJECT_ROOT / "logs" / "elt.log"
 
 
 def _get_latest_file_in_directory(directory, extension):
@@ -23,10 +26,10 @@ def _get_latest_file_in_directory(directory, extension):
     return latest_file
 
 
-def convert_ohlcs_to_parquet():
+def _export_to_parquet():
     latest_file = _get_latest_file_in_directory(DATA_RAW_DIR / "ohlcs", ".json")
     if not latest_file:
-        print("[Load] Warning: No raw OHLC file found.")
+        logging.warning("[Load] Warning: No raw OHLC file found.")
         return None
 
     with open(latest_file, "r", encoding="utf-8") as f:
@@ -56,23 +59,33 @@ def convert_ohlcs_to_parquet():
     output_file = os.path.join(DATA_COMPLETE_DIR, f"ohlcs_{timestamp}.parquet")
     df.to_parquet(output_file, engine="pyarrow", compression="snappy", index=False)
 
-    print(f"[Load] Converted {len(df)} OHLC records to Parquet")
-    print(f"[Load] Saved to: {output_file}")
-    print(f"[Load] File size: {os.path.getsize(output_file) / (1024 * 1024):.2f} MB")
+    logging.info(f"[Load] Converted {len(df)} OHLC records to Parquet")
+    logging.info(f"[Load] Saved to: {output_file}")
+    logging.info(
+        f"[Load] File size: {os.path.getsize(output_file) / (1024 * 1024):.2f} MB"
+    )
 
     return output_file
 
 
-def main():
+def convert_db_to_parquet():
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s [%(levelname)s] %(message)s",
+        handlers=[
+            logging.FileHandler(LOGS_DIR, mode="a", encoding="utf-8"),
+            logging.StreamHandler(sys.stdout),
+        ],
+    )
     try:
-        ohlc_file = convert_ohlcs_to_parquet()
+        ohlc_file = _export_to_parquet()
         if ohlc_file:
-            print(f"[Load] OHLC: {ohlc_file}")
+            logging.info(f"[Load] OHLC: {ohlc_file}")
 
     except Exception as e:
-        print(f"[Load] Error: {e}")
+        logging.error(f"[Load] Error: {e}")
         traceback.print_exc()
 
 
 if __name__ == "__main__":
-    main()
+    convert_db_to_parquet()

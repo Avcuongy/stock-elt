@@ -1,9 +1,16 @@
+import sys
 import datetime
 import json
 import pytz
+import logging
 from pathlib import Path
 from massive import RESTClient
 from utils.config_env import MASSIVE_API_KEY
+
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
+DATA_DIR = PROJECT_ROOT / "data"
+DATA_RAW_DIR = DATA_DIR / "raw"
+LOGS_DIR = PROJECT_ROOT / "logs" / "elt.log"
 
 
 def _get_target_date(delta_days: int = 1) -> datetime.date:
@@ -27,6 +34,14 @@ def _get_output_path(trading_date: datetime.date) -> Path:
 
 
 def crawl_ohlcs():
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s [%(levelname)s] %(message)s",
+        handlers=[
+            logging.FileHandler(LOGS_DIR, mode="a", encoding="utf-8"),
+            logging.StreamHandler(sys.stdout),
+        ],
+    )
     target_date = _get_target_date(delta_days=1)
     date_str = target_date.strftime("%Y-%m-%d")
 
@@ -41,11 +56,13 @@ def crawl_ohlcs():
         with output_path.open("w", encoding="utf-8") as outfile:
             json.dump(results, outfile, indent=4)
 
-        print(f"[Extract] Successful crawling {len(results)} OHLCs to {output_path}")
+        logging.info(
+            f"[Extract] Successful crawling {len(results)} OHLCs to {output_path}"
+        )
         return output_path
 
     except Exception as e:
-        print(f"[Extract] Error: {e}")
+        logging.error(f"[Extract] Error: {e}")
         return None
 
 
