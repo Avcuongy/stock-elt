@@ -15,13 +15,13 @@ def main() -> None:
     LOGS_DIR.mkdir(parents=True, exist_ok=True)
     logging.basicConfig(
         level=logging.INFO,
-        format="[%(levelname)s] %(message)s",
+        format="%(asctime)s [%(levelname)s] %(message)s",
         filemode="a",
         filename=LOGS_DIR / "config.log",
     )
-    logging.info("Config data folders")
+    logging.info("Config project folders")
     setup_folder()
-    logging.info("Config data folders is complete")
+    logging.info("Config project folders is complete")
 
 
 if __name__ == "__main__":

@@ -14,7 +14,7 @@ def main() -> None:
     LOGS_DIR.mkdir(parents=True, exist_ok=True)
     logging.basicConfig(
         level=logging.INFO,
-        format="[%(levelname)s] %(message)s",
+        format="%(asctime)s [%(levelname)s] %(message)s",
         filemode="a",
         filename=LOGS_DIR / "backend.log",
     )
