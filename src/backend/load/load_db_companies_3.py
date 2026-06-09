@@ -1,11 +1,15 @@
+from pathlib import Path
 import os
 import json
 import sys
 import traceback
 from sqlalchemy import create_engine, text
 from sqlalchemy.exc import IntegrityError
-from backend.load.load_db_exchanges_2 import DATA_PROCESSED_DIR
 from utils.config_env import DATABASE_URL
+
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
+DATA_DIR = PROJECT_ROOT / "data"
+DATA_PROCESSED_DIR = DATA_DIR / "processed"
 
 
 def _get_latest_file_in_directory(directory, extension):

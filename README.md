@@ -29,5 +29,7 @@ python scripts/backend/transform.py
 python scripts/backend/load.py
 
 # ETL
-python scripts/elt.py
+python scripts/elt/extract.py
+python scripts/elt/load.py
+python scripts/elt/transform.py
 ```

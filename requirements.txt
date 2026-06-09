@@ -1,5 +1,7 @@
 python-dotenv
 requests
+massive
+pytz
 openpyxl
 pyarrow
 numpy
