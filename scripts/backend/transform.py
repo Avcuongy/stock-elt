@@ -1,31 +1,29 @@
 from pathlib import Path
+import sys
 import logging
-
-import warnings
-
 from backend.transform import transform_others, transform_exchanges, transform_companies
+import warnings
 
 warnings.filterwarnings("ignore")
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-LOGS_DIR = PROJECT_ROOT / "logs"
+LOGS_DIR = PROJECT_ROOT / "logs" / "backend.log"
 
 
 def main() -> None:
-    LOGS_DIR.mkdir(parents=True, exist_ok=True)
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s [%(levelname)s] %(message)s",
-        filemode="a",
-        filename=LOGS_DIR / "Backend.log",
+        handlers=[
+            logging.FileHandler(LOGS_DIR, mode="a", encoding="utf-8"),
+            logging.StreamHandler(sys.stdout),
+        ],
     )
-    logging.info("Transform: Data Source")
-    print("[Backend - Transform] Start")
+    logging.info("[Backend - Transform] Start")
     transform_others()
     transform_exchanges()
     transform_companies()
-    print("[Backend - Transform] Finished")
-    logging.info("Transform: Finished")
+    logging.info("[Backend - Transform] Finished")
 
 
 if __name__ == "__main__":

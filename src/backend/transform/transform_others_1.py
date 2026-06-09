@@ -1,13 +1,16 @@
 from pathlib import Path
 import os
+import sys
 import json
 import datetime
+import logging
 import hashlib
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 DATA_DIR = PROJECT_ROOT / "data"
 DATA_RAW_DIR = DATA_DIR / "raw"
 DATA_PROCESSED_DIR = DATA_DIR / "processed"
+LOGS_DIR = PROJECT_ROOT / "logs" / "backend.log"
 
 
 def _get_latest_file_in_directory(directory, extension):
@@ -81,6 +84,14 @@ def _transform_regions(markets_data):
 
 
 def transform_others():
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s [%(levelname)s] %(message)s",
+        handlers=[
+            logging.FileHandler(LOGS_DIR, mode="a", encoding="utf-8"),
+            logging.StreamHandler(sys.stdout),
+        ],
+    )
     companies_raw_dir = DATA_RAW_DIR / "companies"
     markets_raw_dir = DATA_RAW_DIR / "markets"
 
@@ -92,11 +103,11 @@ def transform_others():
     markets_file = _get_latest_file_in_directory(markets_raw_dir, ".json")
 
     if not companies_file:
-        print("[Backend - Transform] No raw companies file found.")
+        logging.info("[Backend - Transform] No raw companies file found.")
         return
 
     if not markets_file:
-        print("[Backend - Transform] No raw markets file found.")
+        logging.info("[Backend - Transform] No raw markets file found.")
         return
 
     with open(companies_file, "r", encoding="utf-8") as f:
@@ -112,21 +123,23 @@ def transform_others():
     sic_output_file = sicindustries_processed_dir / f"sicindustries_{today}.json"
     with open(sic_output_file, "w", encoding="utf-8") as f:
         json.dump(sic_industries, f, indent=2, ensure_ascii=False)
-    print(f"[Backend - Transform] Transformed {len(sic_industries)} SIC industries.")
+    logging.info(
+        f"[Backend - Transform] Transformed {len(sic_industries)} SIC industries."
+    )
 
     # Industries
     industries = _transform_industries(companies_data)
     industries_output_file = industries_processed_dir / f"industries_{today}.json"
     with open(industries_output_file, "w", encoding="utf-8") as f:
         json.dump(industries, f, indent=2, ensure_ascii=False)
-    print(f"[Backend - Transform] Transformed {len(industries)} industries.")
+    logging.info(f"[Backend - Transform] Transformed {len(industries)} industries.")
 
     # Regions
     regions = _transform_regions(markets_data)
     regions_output_file = regions_processed_dir / f"regions_{today}.json"
     with open(regions_output_file, "w", encoding="utf-8") as f:
         json.dump(regions, f, indent=2, ensure_ascii=False)
-    print(f"[Backend - Transform] Transformed {len(regions)} regions.")
+    logging.info(f"[Backend - Transform] Transformed {len(regions)} regions.")
 
     return {
         "sic_industries": sic_industries,

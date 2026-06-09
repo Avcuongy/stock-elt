@@ -1,5 +1,7 @@
 from pathlib import Path
 import os
+import sys
+import logging
 import json
 import datetime
 import hashlib
@@ -8,6 +10,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[3]
 DATA_DIR = PROJECT_ROOT / "data"
 DATA_RAW_DIR = DATA_DIR / "raw"
 DATA_PROCESSED_DIR = DATA_DIR / "processed"
+LOGS_DIR = PROJECT_ROOT / "logs" / "backend.log"
 
 
 def _get_latest_file_in_directory(directory, extension):
@@ -27,9 +30,17 @@ def _generate_id(text):
 
 
 def transform_exchanges():
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s [%(levelname)s] %(message)s",
+        handlers=[
+            logging.FileHandler(LOGS_DIR, mode="a", encoding="utf-8"),
+            logging.StreamHandler(sys.stdout),
+        ],
+    )
     latest_file = _get_latest_file_in_directory(DATA_RAW_DIR / "markets", ".json")
     if not latest_file:
-        print("[Backend - Transform] No raw markets file found.")
+        logging.info("[Backend - Transform] No raw markets file found.")
         return
 
     with open(latest_file, "r", encoding="utf-8") as f:
@@ -68,7 +79,7 @@ def transform_exchanges():
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(exchanges, f, indent=2, ensure_ascii=False)
 
-    print(f"[Backend - Transform] Transformed {len(exchanges)} exchanges.")
+    logging.info(f"[Backend - Transform] Transformed {len(exchanges)} exchanges.")
 
     return exchanges
 

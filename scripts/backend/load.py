@@ -1,31 +1,29 @@
 from pathlib import Path
+import sys
 import logging
-
-import warnings
-
 from backend.load import load_db_others, load_db_exchanges, load_db_companies
+import warnings
 
 warnings.filterwarnings("ignore")
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-LOGS_DIR = PROJECT_ROOT / "logs"
+LOGS_DIR = PROJECT_ROOT / "logs" / "backend.log"
 
 
 def main() -> None:
-    LOGS_DIR.mkdir(parents=True, exist_ok=True)
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s [%(levelname)s] %(message)s",
-        filemode="a",
-        filename=LOGS_DIR / "Backend.log",
+        handlers=[
+            logging.FileHandler(LOGS_DIR, mode="a", encoding="utf-8"),
+            logging.StreamHandler(sys.stdout),
+        ],
     )
-    logging.info("Load: Data Source")
-    print("[Backend - Load] Start")
+    logging.info("[Backend - Load] Start")
     load_db_others()
     load_db_exchanges()
     load_db_companies()
-    print("[Backend - Load] Finished")
-    logging.info("Load: Finished")
+    logging.info("[Backend - Load] Finished")
 
 
 if __name__ == "__main__":

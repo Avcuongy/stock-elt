@@ -1,8 +1,13 @@
+from pathlib import Path
+import sys
 import requests
 import json
 import datetime
+import logging
 from utils.config_env import SEC_API_KEY
 
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
+LOGS_DIR = PROJECT_ROOT / "logs" / "backend.log"
 SEC_API_KEY = SEC_API_KEY
 EXCHANGES = ["nasdaq", "nyse"]
 COMPANY_LIMIT = 1000
@@ -13,6 +18,14 @@ def crawl_companies():
     Crawl company data from SEC API for NYSE and NASDAQ.
     Saves data to ./data/raw/companies/crawl_companies_{date}.json
     """
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s [%(levelname)s] %(message)s",
+        handlers=[
+            logging.FileHandler(LOGS_DIR, mode="a", encoding="utf-8"),
+            logging.StreamHandler(sys.stdout),
+        ],
+    )
 
     list_companies = []
 
@@ -21,7 +34,7 @@ def crawl_companies():
         response = requests.get(url)
         data = response.json()
         list_companies.extend(data)
-        print(
+        logging.info(
             f"[Backend - Extract] Extracted {len(data)} companies from the {exchange.upper()} stock exchange."
         )
 
@@ -37,7 +50,7 @@ def crawl_companies():
     with open(path, "w") as outfile:
         outfile.write(json_payload)
 
-    print(
+    logging.info(
         f"[Backend - Extract] Successfully saved {len(list_companies)} companies to {path}"
     )
     return path

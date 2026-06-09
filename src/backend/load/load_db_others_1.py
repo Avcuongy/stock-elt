@@ -1,6 +1,7 @@
 from pathlib import Path
 import os
 import json
+import logging
 import sys
 from sqlalchemy import create_engine, text
 from sqlalchemy.exc import IntegrityError
@@ -9,6 +10,7 @@ from utils.config_env import DATABASE_URL
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 DATA_DIR = PROJECT_ROOT / "data"
 DATA_PROCESSED_DIR = DATA_DIR / "processed"
+LOGS_DIR = DATA_DIR / "logs" / "backend.log"
 
 
 def _get_latest_file_in_directory(directory, extension):
@@ -33,15 +35,12 @@ def _get_db_connection():
 
 
 def _load_regions(engine):
-    base_dir = os.path.dirname(
-        os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
-    )
     latest_file = _get_latest_file_in_directory(DATA_PROCESSED_DIR / "regions", ".json")
     if not latest_file:
-        print("[Backend - Load] No processed regions file found.")
+        logging.info("[Backend - Load] No processed regions file found.")
         return
 
-    print(f"[Backend - Load] Loading regions from: {latest_file}")
+    logging.info(f"[Backend - Load] Loading regions from: {latest_file}")
 
     with open(latest_file, "r", encoding="utf-8") as f:
         regions_data = json.load(f)
@@ -76,13 +75,17 @@ def _load_regions(engine):
 
             except IntegrityError as e:
                 skipped += 1
-                print(f"[Backend - Load] Skipped region {region.get('region')}: {e}")
+                logging.info(
+                    f"[Backend - Load] Skipped region {region.get('region')}: {e}"
+                )
             except Exception as e:
-                print(
+                logging.error(
                     f"[Backend - Load] Error inserting region {region.get('region')}: {e}"
                 )
 
-    print(f"[Backend - Load] Regions: {inserted} inserted/updated, {skipped} skipped")
+    logging.info(
+        f"[Backend - Load] Regions: {inserted} inserted/updated, {skipped} skipped"
+    )
 
 
 def _load_industries(engine):
@@ -90,10 +93,10 @@ def _load_industries(engine):
         DATA_PROCESSED_DIR / "industries", ".json"
     )
     if not latest_file:
-        print("[Backend - Load] No processed industries file found.")
+        logging.info("[Backend - Load] No processed industries file found.")
         return
 
-    print(f"[Backend - Load] Loading industries from: {latest_file}")
+    logging.info(f"[Backend - Load] Loading industries from: {latest_file}")
 
     with open(latest_file, "r", encoding="utf-8") as f:
         industries_data = json.load(f)
@@ -123,15 +126,15 @@ def _load_industries(engine):
 
             except IntegrityError as e:
                 skipped += 1
-                print(
+                logging.info(
                     f"[Backend - Load] Skipped industry {industry.get('industry')}: {e}"
                 )
             except Exception as e:
-                print(
+                logging.error(
                     f"[Backend - Load] Error inserting industry {industry.get('industry')}: {e}"
                 )
 
-    print(
+    logging.info(
         f"[Backend - Load] Industries: {inserted} inserted/updated, {skipped} skipped"
     )
 
@@ -145,10 +148,10 @@ def _load_sicindustries(engine):
         DATA_PROCESSED_DIR / "sicindustries", ".json"
     )
     if not latest_file:
-        print("[Backend - Load] No processed sicindustries file found.")
+        logging.info("[Backend - Load] No processed sicindustries file found.")
         return
 
-    print(f"[Backend - Load] Loading SIC industries from: {latest_file}")
+    logging.info(f"[Backend - Load] Loading SIC industries from: {latest_file}")
 
     with open(latest_file, "r", encoding="utf-8") as f:
         sic_data = json.load(f)
@@ -184,24 +187,36 @@ def _load_sicindustries(engine):
 
             except IntegrityError as e:
                 skipped += 1
-                print(f"[Backend - Load] Skipped SIC {sic.get('sic')}: {e}")
+                logging.info(f"[Backend - Load] Skipped SIC {sic.get('sic')}: {e}")
             except Exception as e:
-                print(f"[Backend - Load] Error inserting SIC {sic.get('sic')}: {e}")
+                logging.error(
+                    f"[Backend - Load] Error inserting SIC {sic.get('sic')}: {e}"
+                )
 
-    print(
+    logging.info(
         f"[Backend - Load] SIC Industries: {inserted} inserted/updated, {skipped} skipped"
     )
 
 
 def load_db_others():
-    print("[Backend - Load] Loading Regions + Industries + SIC Industries to MySQL")
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s [%(levelname)s] %(message)s",
+        handlers=[
+            logging.FileHandler(LOGS_DIR, mode="a", encoding="utf-8"),
+            logging.StreamHandler(sys.stdout),
+        ],
+    )
+    logging.info(
+        "[Backend - Load] Loading Regions + Industries + SIC Industries to MySQL"
+    )
     try:
         engine = _get_db_connection()
         _load_regions(engine)
         _load_industries(engine)
         _load_sicindustries(engine)
     except Exception as e:
-        print(f"[Backend - Load] Error: {e}")
+        logging.error(f"[Backend - Load] Error: {e}")
         sys.exit(1)
 
 
