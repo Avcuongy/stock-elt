@@ -4,23 +4,16 @@ import requests
 import json
 import datetime
 import logging
+from utils.logger import get_logger
 from utils.config_env import SEC_API_KEY
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
-LOGS_DIR = PROJECT_ROOT / "logs" / "backend.log"
 SEC_API_KEY = SEC_API_KEY
 EXCHANGES = ["nasdaq", "nyse"]
 COMPANY_LIMIT = 1000
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s",
-    handlers=[
-        logging.FileHandler(LOGS_DIR, mode="a", encoding="utf-8"),
-        logging.StreamHandler(sys.stdout),
-    ],
-)
-logger = logging.getLogger(__name__)
+
+logger = get_logger(__name__, "backend")
 
 
 def crawl_companies():

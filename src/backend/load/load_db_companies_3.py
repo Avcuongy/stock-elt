@@ -6,22 +6,15 @@ import traceback
 import logging
 from sqlalchemy import create_engine, text
 from sqlalchemy.exc import IntegrityError
+from utils.logger import get_logger
 from utils.config_env import DATABASE_URL
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 DATA_DIR = PROJECT_ROOT / "data"
 DATA_PROCESSED_DIR = DATA_DIR / "processed"
-LOGS_DIR = PROJECT_ROOT / "logs" / "backend.log"
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s",
-    handlers=[
-        logging.FileHandler(LOGS_DIR, mode="a", encoding="utf-8"),
-        logging.StreamHandler(sys.stdout),
-    ],
-)
-logger = logging.getLogger(__name__)
+
+logger = get_logger(__name__, "backend")
 
 
 def _get_latest_file_in_directory(directory, extension):

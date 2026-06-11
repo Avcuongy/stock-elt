@@ -1,6 +1,7 @@
 from pathlib import Path
 import logging
 import sys
+from elt.load import convert_db_to_parquet, convert_api_to_parquet, load_to_hdfs
 import warnings
 
 warnings.filterwarnings("ignore")
@@ -21,7 +22,9 @@ logger = logging.getLogger(__name__)
 
 def main() -> None:
     logger.info("[Load] ETL Start")
-
+    convert_db_to_parquet()
+    convert_api_to_parquet()
+    load_to_hdfs()
     logger.info("[Load] ETL Finished")
 
 

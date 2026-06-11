@@ -1,6 +1,7 @@
 from pathlib import Path
 import logging
 import sys
+from elt.transform import transform_1, transform_2
 import warnings
 
 warnings.filterwarnings("ignore")
@@ -21,7 +22,8 @@ logger = logging.getLogger(__name__)
 
 def main() -> None:
     logger.info("[Transform] ETL Start")
-
+    transform_1()
+    transform_2()
     logger.info("[Transform] ETL Finished")
 
 
