@@ -10,7 +10,7 @@ from utils.config_env import SEC_API_KEY
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 SEC_API_KEY = SEC_API_KEY
 EXCHANGES = ["nasdaq", "nyse"]
-COMPANY_LIMIT = 4000
+COMPANY_LIMIT = 5000
 
 
 logger = get_logger(__name__, "backend")

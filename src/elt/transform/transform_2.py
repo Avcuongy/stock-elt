@@ -94,36 +94,36 @@ def _build_fact_stock_daily(
         "company_category",
     )
     fact_joined = fact_df.join(
-        bridge_df, fact_df.ticker == bridge_df.company_ticker, "left"
+        bridge_df, fact_df.ticker == bridge_df.company_ticker, "inner"
     )
 
     fact_joined = fact_joined.join(
-        dim_company_db, fact_joined.ticker == dim_company_db.company_ticker, "left"
+        dim_company_db, fact_joined.ticker == dim_company_db.company_ticker, "inner"
     )
 
     exchange_bridge = raw_exchanges.select("exchange_id", "exchange_name")
     fact_joined = fact_joined.join(
         exchange_bridge,
         fact_joined.company_exchange_id == exchange_bridge.exchange_id,
-        "left",
+        "inner",
     )
-    fact_joined = fact_joined.join(dim_exchange_db, ["exchange_name"], "left")
+    fact_joined = fact_joined.join(dim_exchange_db, ["exchange_name"], "inner")
 
     industry_bridge = raw_industries.select("industry_id", "industry_name")
     fact_joined = fact_joined.join(
         industry_bridge,
         fact_joined.company_industry_id == industry_bridge.industry_id,
-        "left",
+        "inner",
     )
     fact_joined = fact_joined.join(
-        dim_industry_db, ["industry_name", "company_category"], "left"
+        dim_industry_db, ["industry_name", "company_category"], "inner"
     )
 
     fact_final = fact_joined.select(
         col("date_key"),
-        col("company_key"),
-        col("industry_key"),
-        col("exchange_key"),
+        col("company_key").cast("int"),
+        col("industry_key").cast("int"),
+        col("exchange_key").cast("int"),
         col("open").alias("open_price"),
         col("high").alias("high_price"),
         col("low").alias("low_price"),
@@ -132,6 +132,9 @@ def _build_fact_stock_daily(
         col("price_change"),
         col("price_trend"),
     )
+
+    fact_final = fact_final.dropDuplicates()
+
     return fact_final
 
 
