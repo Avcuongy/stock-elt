@@ -4,7 +4,9 @@ import sys
 import logging
 import traceback
 import duckdb
+from pyspark.shell import spark
 from pyspark.sql import SparkSession
+from pyspark.sql.functions import trim, lower
 from pyspark.sql.functions import (
     col,
     to_date,
@@ -27,7 +29,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[3]
 LOGS_DIR = PROJECT_ROOT / "logs" / "elt.log"
 DATA_DIR = PROJECT_ROOT / "data"
 DUCKDB_PATH = PROJECT_ROOT / "data_warehouse.duckdb"
-HDFS_RPC_URL = "hdfs://hadoop-namenode:9000"
+HDFS_RPC_URL = "hdfs://localhost:9000"
 HDFS_BASE_DIR = "/data_lake"
 HDFS_DB_DIR = f"{HDFS_RPC_URL}{HDFS_BASE_DIR}/db"
 HDFS_OHLCS_DIR = f"{HDFS_RPC_URL}{HDFS_BASE_DIR}/ohlcs"
@@ -85,38 +87,63 @@ def _build_fact_stock_daily(
             .when(col("price_change") < 0, "down")
             .otherwise("unchanged"),
         )
+        .withColumn("ticker", trim(lower(col("ticker"))))
     )
 
     bridge_df = raw_companies.select(
-        "company_ticker",
-        "company_exchange_id",
-        "company_industry_id",
+        trim(lower(col("company_ticker"))).alias("bridge_ticker"),
+        col("company_exchange_id").alias("bridge_exchange_id"),
+        col("company_industry_id").alias("bridge_industry_id"),
         "company_category",
     )
     fact_joined = fact_df.join(
-        bridge_df, fact_df.ticker == bridge_df.company_ticker, "inner"
+        bridge_df, fact_df.ticker == bridge_df.bridge_ticker, "inner"
     )
 
+    dim_company_db = dim_company_db.withColumn(
+        "company_ticker", trim(lower(col("company_ticker")))
+    )
     fact_joined = fact_joined.join(
         dim_company_db, fact_joined.ticker == dim_company_db.company_ticker, "inner"
     )
 
-    exchange_bridge = raw_exchanges.select("exchange_id", "exchange_name")
+    exchange_bridge = raw_exchanges.select(
+        col("exchange_id").alias("bridge_exchange_ref_id"),
+        trim(col("exchange_name")).alias("bridge_exchange_name"),
+    )
     fact_joined = fact_joined.join(
         exchange_bridge,
-        fact_joined.company_exchange_id == exchange_bridge.exchange_id,
+        fact_joined.bridge_exchange_id == exchange_bridge.bridge_exchange_ref_id,
         "inner",
     )
-    fact_joined = fact_joined.join(dim_exchange_db, ["exchange_name"], "inner")
 
-    industry_bridge = raw_industries.select("industry_id", "industry_name")
+    dim_exchange_db = dim_exchange_db.withColumn(
+        "exchange_name", trim(col("exchange_name"))
+    )
+    fact_joined = fact_joined.join(
+        dim_exchange_db,
+        fact_joined.bridge_exchange_name == dim_exchange_db.exchange_name,
+        "inner",
+    )
+
+    industry_bridge = raw_industries.select(
+        col("industry_id").alias("bridge_industry_ref_id"),
+        trim(col("industry_name")).alias("bridge_industry_name"),
+    )
     fact_joined = fact_joined.join(
         industry_bridge,
-        fact_joined.company_industry_id == industry_bridge.industry_id,
+        fact_joined.bridge_industry_id == industry_bridge.bridge_industry_ref_id,
         "inner",
     )
+
+    dim_industry_db = dim_industry_db.withColumn(
+        "industry_name", trim(col("industry_name"))
+    )
     fact_joined = fact_joined.join(
-        dim_industry_db, ["industry_name", "company_category"], "inner"
+        dim_industry_db,
+        (fact_joined.bridge_industry_name == dim_industry_db.industry_name)
+        & (fact_joined.company_category == dim_industry_db.company_category),
+        "inner",
     )
 
     fact_final = fact_joined.select(
@@ -131,6 +158,12 @@ def _build_fact_stock_daily(
         col("volume").cast("long"),
         col("price_change"),
         col("price_trend"),
+    )
+
+    fact_final = fact_final.filter(
+        col("company_key").isNotNull()
+        & col("industry_key").isNotNull()
+        & col("exchange_key").isNotNull()
     )
 
     fact_final = fact_final.dropDuplicates()
@@ -188,6 +221,10 @@ def transform_2(spark: SparkSession = None, target_date: str = None):
 
         pd_dim_date = df_dim_date.toPandas()
         pd_fact = df_fact.toPandas()
+        pd_fact = pd_fact.dropna(subset=["company_key", "industry_key", "exchange_key"])
+
+        if pd_fact[["company_key", "industry_key", "exchange_key"]].isna().any().any():
+            raise ValueError("Found NULL foreign keys in FACT_STOCK_DAILY")
 
         with duckdb.connect(str(DUCKDB_PATH)) as conn:
             conn.execute("SET schema = 'DataWarehouse'")

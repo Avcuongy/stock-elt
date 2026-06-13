@@ -15,7 +15,7 @@ warnings.filterwarnings("ignore")
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 DATA_DIR = PROJECT_ROOT / "data"
 DUCKDB_PATH = PROJECT_ROOT / "data_warehouse.duckdb"
-HDFS_RPC_URL = "hdfs://hadoop-namenode:9000"
+HDFS_RPC_URL = "hdfs://localhost:9000"
 HDFS_BASE_DIR = "/data_lake"
 HDFS_DB_DIR = f"{HDFS_RPC_URL}{HDFS_BASE_DIR}/db"
 HDFS_OHLCS_DIR = f"{HDFS_RPC_URL}{HDFS_BASE_DIR}/ohlcs"

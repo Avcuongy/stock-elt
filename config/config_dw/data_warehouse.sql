@@ -58,10 +58,10 @@ CREATE TABLE DIM_EXCHANGE (
 
 -- FACT_STOCK_DAILY
 CREATE TABLE FACT_STOCK_DAILY (
-    date_key INTEGER,
-    company_key INTEGER,
-    industry_key INTEGER,
-    exchange_key INTEGER,
+    date_key INTEGER NOT NULL,
+    company_key INTEGER NOT NULL,
+    industry_key INTEGER NOT NULL,
+    exchange_key INTEGER NOT NULL,
     -- Metrics
     open_price DECIMAL(18, 4),
     high_price DECIMAL(18, 4),
