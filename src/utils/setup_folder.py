@@ -3,6 +3,7 @@ from __future__ import annotations
 from pathlib import Path
 import logging
 import sys
+from utils.logger import get_logger
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DATA_ROOT = PROJECT_ROOT / "data"
@@ -23,6 +24,8 @@ DATA_SUBFOLDERS = [
     "raw/ohlcs",
 ]
 
+logger = get_logger(__name__, "config")
+
 
 def _ensure_data_folders() -> None:
     DATA_ROOT.mkdir(exist_ok=True)
@@ -32,17 +35,9 @@ def _ensure_data_folders() -> None:
 
 
 def setup_folder() -> None:
-    logging.basicConfig(
-        level=logging.INFO,
-        format="%(asctime)s [%(levelname)s] %(message)s",
-        handlers=[
-            logging.FileHandler(LOGS_DIR, mode="a", encoding="utf-8"),
-            logging.StreamHandler(sys.stdout),
-        ],
-    )
-    logging.info(f"[Config] Make data folders at: {DATA_ROOT}")
+    logger.info(f"[Config] Make data folders at: {DATA_ROOT}")
     _ensure_data_folders()
-    logging.info("[Config] Data folder structure is ready")
+    logger.info("[Config] Data folder structure is ready")
 
 
 if __name__ == "__main__":

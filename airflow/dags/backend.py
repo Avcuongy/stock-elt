@@ -13,11 +13,11 @@ default_args = {
 }
 
 with DAG(
-    dag_id="1_backend_source_pipeline",
+    dag_id="backend_etl",
     default_args=default_args,
-    description="Phase 1: Crawl API and Load into MySQL Source Database",
-    schedule_interval="0 1 * * *",
-    start_date=datetime(2026, 6, 11),
+    description="Crawl API and Load into MySQL Source Database",
+    schedule="0 1 1 * *",
+    start_date=datetime(2026, 6, 14),
     catchup=False,
     tags=["source", "backend"],
 ) as dag:

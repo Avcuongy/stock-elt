@@ -14,18 +14,18 @@ default_args = {
 }
 
 with DAG(
-    dag_id="2_data_warehouse_elt",
+    dag_id="elt",
     default_args=default_args,
-    description="Phase 2: Extract from Source, Load and Transform in DuckDB",
-    schedule_interval="0 1 * * *",
-    start_date=datetime(2026, 6, 11),
+    description="Extract from Source, Load and Transform in DuckDB",
+    schedule="0 1 * * *",
+    start_date=datetime(2026, 6, 14),
     catchup=False,
     tags=["warehouse", "elt"],
 ) as dag:
 
     wait_for_backend = ExternalTaskSensor(
         task_id="wait_for_backend_source",
-        external_dag_id="1_backend_source_pipeline",
+        external_dag_id="backend_etl",
         external_task_id="backend_load",
         allowed_states=["success"],
         execution_delta=timedelta(seconds=0),
@@ -48,5 +48,4 @@ with DAG(
         bash_command=f"cd {PROJECT_PATH} && {PYTHON_EXEC} scripts/elt/transform.py",
     )
 
-    # Thiết lập luồng chạy tuần tự
     wait_for_backend >> task_extract >> task_load >> task_transform
