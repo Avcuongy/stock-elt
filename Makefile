@@ -13,6 +13,11 @@ backend:
 	$(PYTHON) scripts/backend/transform.py
 	$(PYTHON) scripts/backend/load.py
 
+elt:
+	$(PYTHON) scripts/elt/extract.py
+	$(PYTHON) scripts/elt/transform.py
+	$(PYTHON) scripts/elt/load.py
+
 ## Display available targets
 help:
 	@echo "Targets:"
