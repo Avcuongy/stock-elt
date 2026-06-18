@@ -61,7 +61,7 @@ def _cleanup_old_files(
                     del_path = f"{hdfs_target}/{f_name}"
                     client.delete(del_path)
         logger.info(
-            f"[Load] Cleaned up old files in HDFS: {hdfs_target}, just keeping: {latest_date})"
+            f"[Load] Cleaned up old files in HDFS: {hdfs_target}, just keeping: {latest_date}"
         )
     except Exception:
         pass
