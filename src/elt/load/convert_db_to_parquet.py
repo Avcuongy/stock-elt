@@ -1,13 +1,14 @@
-from pathlib import Path
+import datetime
+import logging
 import os
 import sys
-import datetime
 import traceback
-import logging
+from pathlib import Path
+
 import pandas as pd
-from sqlalchemy import create_engine
-from utils.logger import get_logger
+from sqlalchemy import create_engine, text
 from utils.config_env import DATABASE_URL
+from utils.logger import get_logger
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 DATA_DIR = PROJECT_ROOT / "data"
@@ -41,12 +42,18 @@ def _export_to_parquet():
 
     try:
         engine = _get_db_connection()
-
         exported_files = {}
 
+        output_dir = DATA_COMPLETE_DIR / "db"
+        output_dir.mkdir(parents=True, exist_ok=True)
+
         for table in TABLES:
-            query = f"SELECT * FROM {table}"
-            df = pd.read_sql(query, engine)
+            logger.info(f"[Load] Reading table: {table}")
+
+            query = text(f"SELECT * FROM {table}")
+            with engine.connect() as connection:
+                result = connection.execute(query)
+                df = pd.DataFrame(result.fetchall(), columns=result.keys())
 
             if df.empty:
                 logger.warning(
@@ -54,22 +61,22 @@ def _export_to_parquet():
                 )
                 continue
 
-            output_file = os.path.join(
-                DATA_COMPLETE_DIR / "db", f"{table}_{timestamp}.parquet"
-            )
+            output_file = output_dir / f"{table}_{timestamp}.parquet"
 
             df.to_parquet(
                 output_file,
                 engine="pyarrow",
                 compression="snappy",
                 index=False,
+                coerce_timestamps="us",
+                allow_truncated_timestamps=True,
             )
 
             logger.info(
-                f"[Load] Exported table: {table} | Row exported: {len(df):,} | Saved to: {output_file}"
+                f"[Load] Exported table: {table} | Row exported: {len(df):,} | Saved to: {output_file.name}"
             )
 
-            exported_files[table] = output_file
+            exported_files[table] = str(output_file)
 
         if not exported_files:
             logger.warning(

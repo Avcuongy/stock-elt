@@ -13,7 +13,7 @@ default_args = {
 }
 
 with DAG(
-    dag_id="elt",
+    dag_id="elt_main",
     default_args=default_args,
     description="ELT",
     schedule="*/50 * * * *",

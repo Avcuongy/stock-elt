@@ -11,7 +11,7 @@ warnings.filterwarnings("ignore")
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 DATA_DIR = PROJECT_ROOT / "data"
-WEBHDFS_URL = "http://localhost:9870"
+WEBHDFS_URL = "http://hadoop-namenode:9870"
 HDFS_USER = "root"
 HDFS_BASE_DIR = "/data_lake"
 

@@ -83,7 +83,14 @@ def _export_to_parquet():
     output_dir.mkdir(parents=True, exist_ok=True)
     output_file = output_dir / f"ohlcs_{timestamp_str}.parquet"
 
-    df.to_parquet(output_file, engine="pyarrow", compression="snappy", index=False)
+    df.to_parquet(
+        output_file,
+        engine="pyarrow",
+        compression="snappy",
+        index=False,
+        coerce_timestamps="us",
+        allow_truncated_timestamps=True,
+    )
 
     logger.info(f"[Load] Converted {len(df)} OHLC records | Saved at: {output_file}")
 
