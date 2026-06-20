@@ -46,8 +46,8 @@ A pipeline that automatically collects, stores, and processes stock market data 
 
 The visualization report is built in Power BI, with data pulled directly from the DuckDB Data Warehouse:
 
-- Power BI file: [`dashboard/dashboard.pbix`](dashboard/dashboard.pbix)
-- PDF: [`dashboard/dashboard.pdf`](dashboard/dashboard.pdf)
+- Power BI file: [`dashboard.pbix`](dashboard/dashboard.pbix)
+- PDF: [`dashboard.pdf`](dashboard/dashboard.pdf)
 
 ---
 
