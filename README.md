@@ -15,7 +15,7 @@ A pipeline that automatically collects, stores, and processes stock market data 
 ### Tech stack:
 
 <p align="center">
-  <img src="assets/tool.png" alt="tool" width="700">
+  <img src="assets/tool.png" alt="tool" width="750">
 </p>
 
 ### APIs:
