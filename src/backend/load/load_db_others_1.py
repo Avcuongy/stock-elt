@@ -1,26 +1,29 @@
-from pathlib import Path
-import os
+import datetime
 import json
 import logging
+import os
 import sys
+from pathlib import Path
+
 from sqlalchemy import create_engine, text
 from sqlalchemy.exc import IntegrityError
-from utils.logger import get_logger
 from utils.config_env import DATABASE_URL
+from utils.logger import get_logger
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 DATA_DIR = PROJECT_ROOT / "data"
 DATA_PROCESSED_DIR = DATA_DIR / "processed"
 
-
 logger = get_logger(__name__, "backend")
 
 
 def _get_latest_file_in_directory(directory, extension):
+    if not os.path.exists(directory):
+        return None
     files = [
         os.path.join(directory, f)
         for f in os.listdir(directory)
-        if f.endswith(extension)
+        if f.endswith(extension) and not f.startswith(".")
     ]
     if not files:
         return None
@@ -31,9 +34,9 @@ def _get_latest_file_in_directory(directory, extension):
 def _get_db_connection():
     database_url = DATABASE_URL
     if not database_url:
-        raise ValueError("DATABASE_URL not found")
+        raise ValueError("DATABASE_URL environment variable is not set or empty")
+    engine = create_engine(database_url, echo=False, pool_pre_ping=True)
 
-    engine = create_engine(database_url, echo=False)
     return engine
 
 
@@ -51,20 +54,20 @@ def _load_regions(engine):
     inserted = 0
     skipped = 0
 
-    with engine.connect() as conn:
+    sql = text("""
+        INSERT INTO regions (region_name, region_market_type, region_local_open, region_local_close)
+        VALUES (:name, :market_type, :open, :close)
+        ON DUPLICATE KEY UPDATE
+            region_market_type = :market_type,
+            region_local_open = :open,
+            region_local_close = :close
+    """)
+
+    with engine.begin() as conn:
         for region in regions_data:
             try:
                 local_open = region.get("local_open", "00:00")
                 local_close = region.get("local_close", "00:00")
-
-                sql = text("""
-                    INSERT INTO regions (region_name, region_market_type, region_local_open, region_local_close)
-                    VALUES (:name, :market_type, :open, :close)
-                    ON DUPLICATE KEY UPDATE
-                        region_market_type = :market_type,
-                        region_local_open = :open,
-                        region_local_close = :close
-                """)
 
                 conn.execute(
                     sql,
@@ -76,17 +79,16 @@ def _load_regions(engine):
                     },
                 )
                 inserted += 1
-
             except IntegrityError as e:
                 skipped += 1
-                logger.info(
-                    f"[Backend - Load] Skipped region {region.get('region')}: {e}"
+                logger.warning(
+                    f"[Backend - Load] Skipped region {region.get('region')} (IntegrityError): {e}"
                 )
             except Exception as e:
+                skipped += 1
                 logger.error(
                     f"[Backend - Load] Error inserting region {region.get('region')}: {e}"
                 )
-        conn.commit()
 
     logger.info(
         f"[Backend - Load] Regions: {inserted} inserted/updated, {skipped} skipped"
@@ -109,16 +111,16 @@ def _load_industries(engine):
     inserted = 0
     skipped = 0
 
-    with engine.connect() as conn:
+    sql = text("""
+        INSERT INTO industries (industry_name, industry_sector)
+        VALUES (:name, :sector)
+        ON DUPLICATE KEY UPDATE
+            industry_sector = :sector
+    """)
+
+    with engine.begin() as conn:
         for industry in industries_data:
             try:
-                sql = text("""
-                    INSERT INTO industries (industry_name, industry_sector)
-                    VALUES (:name, :sector)
-                    ON DUPLICATE KEY UPDATE
-                        industry_sector = :sector
-                """)
-
                 conn.execute(
                     sql,
                     {
@@ -126,19 +128,17 @@ def _load_industries(engine):
                         "sector": industry.get("sector"),
                     },
                 )
-
                 inserted += 1
-
             except IntegrityError as e:
                 skipped += 1
-                logger.info(
-                    f"[Backend - Load] Skipped industry {industry.get('industry')}: {e}"
+                logger.warning(
+                    f"[Backend - Load] Skipped industry {industry.get('industry')} (IntegrityError): {e}"
                 )
             except Exception as e:
+                skipped += 1
                 logger.error(
                     f"[Backend - Load] Error inserting industry {industry.get('industry')}: {e}"
                 )
-        conn.commit()
 
     logger.info(
         f"[Backend - Load] Industries: {inserted} inserted/updated, {skipped} skipped"
@@ -149,7 +149,6 @@ def _load_sicindustries(engine):
     latest_file = _get_latest_file_in_directory(
         DATA_PROCESSED_DIR / "sicindustries", ".json"
     )
-
     if not latest_file:
         logger.info("[Backend - Load] No processed sicindustries file found.")
         return
@@ -162,20 +161,20 @@ def _load_sicindustries(engine):
     inserted = 0
     skipped = 0
 
-    with engine.connect() as conn:
+    sql = text("""
+        INSERT INTO sicindustries (sic_id, sic_industry, sic_sector)
+        VALUES (:sic_id, :industry, :sector)
+        ON DUPLICATE KEY UPDATE
+            sic_industry = :industry,
+            sic_sector = :sector
+    """)
+
+    with engine.begin() as conn:
         for sic in sic_data:
             try:
                 sic_id = sic.get("sic")
                 if not sic_id:
                     continue
-
-                sql = text("""
-                    INSERT INTO sicindustries (sic_id, sic_industry, sic_sector)
-                    VALUES (:sic_id, :industry, :sector)
-                    ON DUPLICATE KEY UPDATE
-                        sic_industry = :industry,
-                        sic_sector = :sector
-                """)
 
                 conn.execute(
                     sql,
@@ -186,15 +185,16 @@ def _load_sicindustries(engine):
                     },
                 )
                 inserted += 1
-
             except IntegrityError as e:
                 skipped += 1
-                logger.info(f"[Backend - Load] Skipped SIC {sic.get('sic')}: {e}")
+                logger.warning(
+                    f"[Backend - Load] Skipped SIC {sic.get('sic')} (IntegrityError): {e}"
+                )
             except Exception as e:
+                skipped += 1
                 logger.error(
                     f"[Backend - Load] Error inserting SIC {sic.get('sic')}: {e}"
                 )
-        conn.commit()
 
     logger.info(
         f"[Backend - Load] SIC Industries: {inserted} inserted/updated, {skipped} skipped"
@@ -203,7 +203,7 @@ def _load_sicindustries(engine):
 
 def load_db_others():
     logger.info(
-        "[Backend - Load] Loading Regions + Industries + SIC Industries to MySQL"
+        "[Backend - Load] Loading Regions + Industries + SIC Industries to database"
     )
     try:
         engine = _get_db_connection()
@@ -211,7 +211,7 @@ def load_db_others():
         _load_industries(engine)
         _load_sicindustries(engine)
     except Exception as e:
-        logger.error(f"[Backend - Load] Error: {e}")
+        logger.error(f"[Backend - Load] Critical error in pipeline execution: {e}")
         sys.exit(1)
 
 

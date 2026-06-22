@@ -3,7 +3,7 @@ from airflow.providers.standard.operators.bash import BashOperator
 from airflow import DAG
 
 PROJECT_PATH = "/opt/airflow/project"
-PYTHON_EXEC = f"export PYTHONPATH={PROJECT_PATH} && python"
+PYTHON_EXEC = f"export PYTHONPATH={PROJECT_PATH}:{PROJECT_PATH}/src && python"
 
 default_args = {
     "owner": "airflow",

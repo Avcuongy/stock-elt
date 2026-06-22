@@ -8,7 +8,7 @@ from utils.config_env import SEC_API_KEY
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 EXCHANGES = ["nasdaq", "nyse"]
-COMPANY_LIMIT = 2000
+COMPANY_LIMIT = 100
 
 logger = get_logger(__name__, "backend")
 

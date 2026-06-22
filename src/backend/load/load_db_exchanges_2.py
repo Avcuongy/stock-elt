@@ -1,12 +1,14 @@
-from pathlib import Path
-import os
+import datetime
 import json
 import logging
+import os
 import sys
+from pathlib import Path
+
 from sqlalchemy import create_engine, text
 from sqlalchemy.exc import IntegrityError
-from utils.logger import get_logger
 from utils.config_env import DATABASE_URL
+from utils.logger import get_logger
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 DATA_DIR = PROJECT_ROOT / "data"
@@ -16,10 +18,12 @@ logger = get_logger(__name__, "backend")
 
 
 def _get_latest_file_in_directory(directory, extension):
+    if not os.path.exists(directory):
+        return None
     files = [
         os.path.join(directory, f)
         for f in os.listdir(directory)
-        if f.endswith(extension)
+        if f.endswith(extension) and not f.startswith(".")
     ]
     if not files:
         return None
@@ -32,7 +36,7 @@ def _get_db_connection():
     if not database_url:
         raise ValueError("DATABASE_URL not found")
 
-    engine = create_engine(database_url, echo=False)
+    engine = create_engine(database_url, echo=False, pool_pre_ping=True)
     return engine
 
 
@@ -53,62 +57,64 @@ def _load_exchanges(engine):
     skipped = 0
     errors = 0
 
-    with engine.connect() as conn:
+    insert_sql = text("""
+        INSERT INTO exchanges (exchange_name, exchange_region_id)
+        VALUES (:name, :region_id)
+        ON DUPLICATE KEY UPDATE
+            exchange_region_id = :region_id
+    """)
+
+    with engine.begin() as conn:
+        region_map = {}
+        region_query = text("SELECT region_name, region_id FROM regions")
+        result = conn.execute(region_query)
+        for row in result.fetchall():
+            region_map[row[0]] = row[1]
+
         for exchange in exchanges_data:
             try:
                 exchange_name = exchange.get("name")
                 region_name = exchange.get("region")
 
                 if not exchange_name:
-                    logger.info(
+                    logger.warning(
                         f"[Backend - Load] Skipping exchange with no name: {exchange}"
                     )
                     skipped += 1
                     continue
 
-                region_query = text("""
-                    SELECT region_id FROM regions WHERE region_name = :region_name
-                """)
-                result = conn.execute(region_query, {"region_name": region_name})
-                region_row = result.fetchone()
+                region_id = region_map.get(region_name)
 
-                if not region_row:
-                    logger.info(
-                        f"[Backend - Load] Warning: Region '{region_name}' not found for exchange '{exchange_name}'. Skipping."
+                if not region_id:
+                    logger.warning(
+                        f"[Backend - Load] Warning: Region '{region_name}' not found in DB for exchange '{exchange_name}'. Skipping."
                     )
                     errors += 1
                     continue
 
-                region_id = region_row[0]
-
-                sql = text("""
-                    INSERT INTO exchanges (exchange_name, exchange_region_id)
-                    VALUES (:name, :region_id)
-                    ON DUPLICATE KEY UPDATE
-                        exchange_region_id = :region_id
-                """)
-
-                conn.execute(sql, {"name": exchange_name, "region_id": region_id})
+                conn.execute(
+                    insert_sql, {"name": exchange_name, "region_id": region_id}
+                )
                 inserted += 1
 
             except IntegrityError as e:
                 skipped += 1
-                logger.info(
-                    f"[Backend - Load] Skipped exchange {exchange.get('name')}: {e}"
+                logger.warning(
+                    f"[Backend - Load] Skipped exchange {exchange.get('name')} (IntegrityError): {e}"
                 )
             except Exception as e:
                 errors += 1
                 logger.error(
                     f"[Backend - Load] Error inserting exchange {exchange.get('name')}: {e}"
                 )
-        conn.commit()
+
     logger.info(
         f"[Backend - Load] Exchanges: {inserted} inserted/updated, {skipped} skipped, {errors} errors"
     )
 
 
 def load_db_exchanges():
-    logger.info("[Backend - Load] Loading Exchanges to MySQL")
+    logger.info("[Backend - Load] Loading Exchanges to database")
     try:
         engine = _get_db_connection()
         _load_exchanges(engine)
