@@ -12,9 +12,9 @@ logger = get_logger(__name__, "elt")
 
 
 def main() -> None:
-    logger.info("[Extract] ETL Start")
+    logger.info("[Extract] Start")
     crawl_ohlcs()
-    logger.info("[Extract] ETL Finished")
+    logger.info("[Extract] Finished")
 
 
 if __name__ == "__main__":

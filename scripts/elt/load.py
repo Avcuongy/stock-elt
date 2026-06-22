@@ -14,11 +14,11 @@ logger = get_logger(__name__, "backend")
 
 
 def main() -> None:
-    logger.info("[Load] ETL Start")
+    logger.info("[Load] Start")
     convert_db_to_parquet()
     convert_api_to_parquet()
     load_to_hdfs()
-    logger.info("[Load] ETL Finished")
+    logger.info("[Load] Finished")
 
 
 if __name__ == "__main__":

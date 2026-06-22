@@ -14,10 +14,10 @@ logger = get_logger(__name__, "backend")
 
 
 def main() -> None:
-    logger.info("[Transform] ETL Start")
+    logger.info("[Transform] Start")
     transform_1()
     transform_2()
-    logger.info("[Transform] ETL Finished")
+    logger.info("[Transform] Finished")
 
 
 if __name__ == "__main__":
